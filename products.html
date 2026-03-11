@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organic Tea</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="bg-[#7E4404] text-center text-sm py-2 text-white font-poppins">
+        Free shipping on all orders of $80 or more.
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="relative flex items-center justify-between px-20 py-3 border-b">
+
+        <!-- Menu -->
+        <nav class="hidden md:flex gap-8 font-medium text-black text-[15px] font-poppins">
+            <a href="index.html">HOME</a>
+            <a href="products.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">PRODUCTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+        <!-- Center Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-12 w-auto object-contain">
+        </div>
+
+        <!-- Enquiry Button -->
+        <div class="flex items-center">
+            <button
+                class="bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+                ENQUIRY
+            </button>
+        </div>
+
+    </header>
+    <section class="relative bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
+
+            <!-- Breadcrumb -->
+            <div class="text-md text-gray-200 text-left mb-16 font-poppins">
+                Home <span class="mx-2">›</span> Products
+            </div>
+
+            <!-- Small Title -->
+            <p class="uppercase tracking-[3px] text-sm font-medium mb-6 font-poppins">
+                Our Products
+            </p>
+
+            <h1 class="text-6xl mb-8 font-playfair">
+                Explore Our Products
+            </h1>
+
+            <!-- Description -->
+            <p class="text-md text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
+                Discover our range of premium natural coconut oil products and more. Each product is carefully crafted
+                to ensure the highest quality, purity, and wellness for your home.
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="relative overflow-hidden py-20">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="./static/images/bg3.png" class="w-full h-full object-cover opacity-10" alt="background">
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="relative">
+
+
+
+            <section class="">
+
+                <div class="max-w-7xl mx-auto px-6">
+
+                    <!-- Heading -->
+                    <div class="text-center mb-14">
+
+                        <p class="uppercase tracking-[3px] text-sm font-semibold text-[#7E4404] font-poppins">
+                            Shop By Category
+                        </p>
+
+                        <h2 class="text-lg font-poppins mt-6 max-w-3xl mx-auto text-gray-600">
+                            Explore our complete range of traditional food products crafted
+                            with care and sourced from trusted producers to bring authentic
+                            taste and nutrition to your home.
+                        </h2>
+
+                    </div>
+
+
+                    
+
+                    <div class=" py-10">
+
+                        <div class="flex animate-marquee w-max">
+
+                            <!-- FIRST SET -->
+                            <div class="flex gap-12 items-start text-center">
+
+                                <!-- Dairy Products -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/dairy.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Dairy Products</h3>
+                                    
+                                </div>
+
+                                <!-- Cold Pressed Oils -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/oil.jpg" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Cold Pressed Oils</h3>
+                                </div>
+
+                                <!-- Grain Powders -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/grain.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Grain Powders</h3>
+                                </div>
+
+                                <!-- Special Puttu Powders -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/puttu.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Special Puttu Powders</h3>
+                                </div>
+
+                                <!-- Tapioca Products -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/tapioca.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Tapioca Products</h3>
+                                </div>
+
+                                <!-- Pickles -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/pickles.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Pickles</h3>
+                                </div>
+
+                                <!-- Frozen Foods -->
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/frozen.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Frozen Foods</h3>
+                                </div>
+
+                                <!-- Ready to Cook -->
+                                <div class="pr-6">
+                                    <img src="images/readycook.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+
+                                    <h3 class="text-lg font-serif">Ready to Cook</h3>
+                                </div>
+
+                            </div>
+
+                            <!-- DUPLICATE SET FOR SMOOTH LOOP -->
+                            <div class="flex gap-12 items-start text-center ml-12">
+
+                                <!-- Repeat same items -->
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/dairy.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Dairy Products</h3>
+                                </div>
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/oil.jpg" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Cold Pressed Oils</h3>
+                                </div>
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/grain.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Grain Powders</h3>
+                                </div>
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/puttu.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Special Puttu Powders</h3>
+                                </div>
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/tapioca.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Tapioca Products</h3>
+                                </div>
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/pickles.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Pickles</h3>
+                                </div>
+
+                                <div class="border-r border-gray-300 pr-6">
+                                    <img src="images/frozen.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Frozen Foods</h3>
+                                </div>
+
+                                <div class="pr-6">
+                                    <img src="images/readycook.jpg"
+                                        class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
+                                    <h3 class="text-lg font-serif">Ready to Cook</h3>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="flex justify-end mb-10 gap-4 mt-10">
+
+<button id="packedTab"
+class="tab-btn px-6 py-2 border border-[#7E4404] bg-[#7E4404] text-white">
+Packed
+</button>
+
+<button id="looseTab"
+class="tab-btn px-6 py-2 border border-[#7E4404] text-black">
+Loose
+</button>
+
+</div>
+
+                </div>
+
+            </section>
+
+
+
+        </div>
+    </div>
+    <script>
+
+const tabs = document.querySelectorAll(".tab-btn");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+    tabs.forEach(btn => {
+      btn.classList.remove("bg-[#7E4404]", "text-white");
+      btn.classList.add("text-black");
+    });
+
+    tab.classList.add("bg-[#7E4404]", "text-white");
+    tab.classList.remove("text-black");
+
+  });
+});
+
+</script>
+</body>
+
+</html>

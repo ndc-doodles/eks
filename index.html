@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organic Tea</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="bg-[#7E4404] text-center text-sm py-2 text-white font-poppins">
+        Free shipping on all orders of $80 or more.
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="relative flex items-center justify-between px-20 py-3 border-b">
+
+        <!-- Menu -->
+        <nav class="hidden md:flex gap-8 font-medium text-black text-[15px] font-poppins">
+            <a href="index.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+
+        </nav>
+
+        <!-- Center Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-12 w-auto object-contain">
+        </div>
+
+        <!-- Enquiry Button -->
+        <div class="flex items-center">
+            <button
+                class="bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+                ENQUIRY
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden py-24 ">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="./static/images/hero.png" class="w-full h-full object-cover" alt="background">
+        </div>
+
+        <!-- Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#3f5400]/80 to-[#2e2401]/70"></div>
+
+
+        <div class="relative max-w-7xl h-[60vh] mx-auto px-10 grid md:grid-cols-2 items-center gap-16">
+
+            <!-- LEFT IMAGE -->
+            <div class="relative h-full flex items-end">
+
+                <div class="absolute top-0 left-0 w-[420px] overflow-hidden rounded-t-full shadow-2xl">
+
+                    <img id="heroImage" src="./static/images/hero_sub1.png"
+                        class="w-full h-[550px] object-cover transition-opacity duration-700 opacity-100" />
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT TEXT -->
+
+            <div class="text-white">
+
+                <p class="uppercase tracking-widest text-[15px] text-gray-200 mb-6 font-medium font-poppins">
+                    RICHER FLAVORS
+                </p>
+
+                <h1 class="hero-title text-6xl leading-tight mb-6 font-bold font-playfair">
+                    Enjoy Robust,<br>
+                    Flavorful Teas
+                </h1>
+
+                <p class="text-gray-200 max-w-md mb-8 font-medium font-poppins">
+                    Introducing a more premium and bold tea using only the finest ingredients.
+                </p>
+
+                <button class="bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition font-poppins">
+                    SHOP NOW
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Decorative Leaves -->
+
+        <img src="./static/images/leaf1.png" class="absolute w-16 left-16 top-40 opacity-80 float1">
+
+        <img src="./static/images/leaf2.png" class="absolute w-36 right-24 top-32 opacity-80 float2">
+
+        <img src="./static/images/leaf1.png" class="absolute w-20 bottom-10 right-1/3 opacity-80 float1">
+
+    </section>
+
+
+
+
+    <div class="relative overflow-hidden py-20">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="./static/images/bg3.png" class="w-full h-full object-cover opacity-10" alt="background">
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="relative">
+
+            <!-- Section 1 -->
+            <section>
+
+                <div class="max-w-4xl mx-auto text-center px-6">
+
+                    <p class="uppercase tracking-widest text-[#7E4404] font-semibold text-[15px] mb-4 font-poppins">
+                        OUR PROMISE
+                    </p>
+
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight font-playfair text-black">
+                        Pure, Natural & Traditionally Processed
+                    </h2>
+
+                    <p class="text-gray-600 text-md leading-relaxed font-poppins">
+                        At EKS Mills, we are committed to delivering high-quality flour and oils made from
+                        carefully selected grains and seeds. Our products are processed with hygienic methods,
+                        ensuring purity, freshness, and authentic taste in every pack.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Section 2 -->
+            <section class="py-20">
+
+                <div class="w-full px-10 mx-auto grid md:grid-cols-3">
+
+                    <!-- Feature 1 -->
+                    <div class="border-r border-gray-200 text-center p-10 bg-white/10 backdrop-blur-xs">
+
+                        <img src="./static/images/pure.png" class="w-full h-[350px] object-cover mb-8">
+
+                        <p class="uppercase tracking-widest text-sm text-[#7E4404] font-semibold mb-2 font-poppins">
+                            QUALITY
+                        </p>
+
+                        <h2 class="text-3xl font-semibold mb-4 font-playfair">
+                            Pure & High Quality
+                        </h2>
+
+                        <p class="text-gray-600 leading-relaxed font-poppins text-md">
+                            Our products are made from carefully selected grains and oils ensuring
+                            premium purity and consistent high quality in every batch.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+                    <div class="border-r border-gray-200 text-center p-10 bg-white/10 backdrop-blur-xs">
+
+                        <img src="./static/images/nopreserve.png" class="w-full h-[350px] object-cover mb-8">
+
+                        <p class="uppercase tracking-widest text-sm text-[#7E4404] font-semibold mb-2 font-poppins">
+                            NATURAL
+                        </p>
+
+                        <h2 class="text-3xl font-semibold mb-4 font-playfair">
+                            No Preservatives
+                        </h2>
+
+                        <p class="text-gray-600 leading-relaxed font-poppins text-md">
+                            Our flour and oils are processed naturally without artificial preservatives,
+                            maintaining authentic taste and nutrition.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+                    <div class="text-center p-10 bg-white/10 backdrop-blur-xs">
+
+                        <img src="./static/images/hygiene.png" class="w-full h-[350px] object-cover mb-8">
+
+                        <p class="uppercase tracking-widest text-sm text-[#7E4404] font-semibold mb-2 font-poppins">
+                            HYGIENE
+                        </p>
+
+                        <h2 class="text-3xl font-semibold mb-4 font-playfair">
+                            Hygienic Processing
+                        </h2>
+
+                        <p class="text-gray-600 leading-relaxed text-md font-poppins text-md">
+                            All grains are properly washed, dried, and blended using modern hygienic
+                            methods to ensure safe and healthy products.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="py-24 ">
+
+                <div class="w-full mx-auto px-20">
+
+                    <!-- Top Header -->
+                    <div class="flex items-center justify-between mb-12">
+
+                        <div>
+                            <p class="uppercase tracking-widest text-sm text-[#7E4404] font-semibold mb-2">
+                                OUR PRODUCTS
+                            </p>
+
+                            <h2 class="text-4xl font-playfair font-semibold">
+                                Freshly Milled Products
+                            </h2>
+                        </div>
+
+                        <a href="/products"
+                            class="underline px-6 py-3 text-sm font-semibold hover:bg-[#7E4404] hover:text-white transition">
+                            VIEW ALL PRODUCTS
+                        </a>
+
+                    </div>
+
+
+
+
+                    <div id="productContainer"
+                        class="grid md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200 h-[500px]">
+
+                        <div
+                            class="relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden">
+
+                            <!-- Image -->
+                            <div class="relative overflow-hidden mb-6 
+group-hover:absolute group-hover:inset-0 
+group-hover:mb-0 transition-all duration-500">
+
+                                <!-- Default Image -->
+                                <img src="./static/images/demo.png" class="w-full h-[320px] object-cover
+group-hover:absolute group-hover:inset-0
+group-hover:h-full group-hover:w-full
+transition-all duration-500">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/hero_sub3.png" class="w-full h-[320px] object-cover absolute inset-0
+opacity-0 group-hover:opacity-100
+group-hover:h-full group-hover:w-full
+transition-all duration-500">
+                            </div>
+
+                            <!-- NORMAL CONTENT -->
+                            <div class="group-hover:hidden relative z-10">
+                                <p class="text-gray-400 text-sm mb-1">
+                                    Spices & Flours
+                                </p>
+
+                                <h3 class="text-xl font-playfair mb-2">
+                                    Red Chilli Flour
+                                </h3>
+
+                                <p class="font-semibold text-lg">
+                                    ₹120 / Kg
+                                </p>
+                            </div>
+
+                            <!-- HOVER CARD -->
+                            <div class="absolute inset-0 flex items-end justify-center 
+opacity-0 group-hover:opacity-100 
+transition duration-500 z-20">
+
+                                <div class="bg-white w-[80%] shadow-xl mb-8">
+
+                                    <div class="text-center p-6">
+
+                                        <p class="text-gray-400 text-sm mb-1">
+                                            Spices & Flours
+                                        </p>
+
+                                        <h3 class="text-2xl font-playfair mb-2">
+                                            Red Chilli Flour
+                                        </h3>
+
+                                        <p class="font-semibold text-lg mb-4">
+                                            ₹120 / Kg
+                                        </p>
+
+                                        <!-- ACTION BUTTONS -->
+                                        <div class="flex justify-center gap-3 mb-4">
+
+                                            <!-- Detail View -->
+                                            <a href="/product-detail"
+                                                class="border border-gray-800 px-4 py-2 text-sm font-semibold hover:bg-gray-800 hover:text-white transition">
+                                                Detail View
+                                            </a>
+
+                                            <!-- WhatsApp Enquiry -->
+                                            <a href="https://wa.me/919876543210?text=Hello%20I%20am%20interested%20in%20Red%20Chilli%20Flour"
+                                                target="_blank"
+                                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 text-sm font-semibold transition">
+                                                WhatsApp
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- WEIGHT OPTIONS -->
+                                    <div class="grid grid-cols-3 border-t">
+
+                                        <button onclick="updatePrice(this,0.5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            500 g
+                                        </button>
+
+                                        <button onclick="updatePrice(this,1)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            1 KG
+                                        </button>
+
+                                        <button onclick="updatePrice(this,5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            5 KG
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden">
+
+                            <!-- Image -->
+                            <div class="relative overflow-hidden mb-6 
+        group-hover:absolute group-hover:inset-0 
+        group-hover:mb-0 transition-all duration-500">
+
+                                <!-- Default Image -->
+                                <img src="./static/images/image.png" class="w-full h-[320px] object-cover
+            group-hover:absolute group-hover:inset-0
+            group-hover:h-full group-hover:w-full
+            transition-all duration-500">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/hero_sub3.png" class="w-full h-[320px] object-cover absolute inset-0
+            opacity-0 group-hover:opacity-100
+            group-hover:h-full group-hover:w-full
+            transition-all duration-500">
+                            </div>
+
+                            <!-- NORMAL CONTENT -->
+                            <div class="group-hover:hidden relative z-10">
+                                <p class="text-gray-400 text-sm mb-1">
+                                    Spices & Flours
+                                </p>
+
+                                <h3 class="text-xl font-playfair mb-2">
+                                    Red Chilli Flour
+                                </h3>
+
+                                <p class="font-semibold text-lg">
+                                    ₹120 / Kg
+                                </p>
+                            </div>
+
+                            <!-- HOVER CARD -->
+                            <div class="absolute inset-0 flex items-end justify-center 
+        opacity-0 group-hover:opacity-100 
+        transition duration-500 z-20">
+
+                                <div class="bg-white w-[75%] shadow-xl mb-8">
+
+                                    <div class="text-center p-6">
+                                        <p class="text-gray-400 text-sm mb-1">
+                                            Spices & Flours
+                                        </p>
+
+                                        <h3 class="text-2xl font-playfair mb-2">
+                                            Red Chilli Flour
+                                        </h3>
+
+                                        <p class="font-semibold text-lg">
+                                            ₹120 / Kg
+                                        </p>
+                                    </div>
+
+                                    <div class="grid grid-cols-3 border-t">
+
+                                        <button onclick="updatePrice(this,0.5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            500 g
+                                        </button>
+
+                                        <button onclick="updatePrice(this,1)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            1 KG
+                                        </button>
+
+                                        <button onclick="updatePrice(this,5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            5 KG
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden">
+
+                            <!-- Image -->
+                            <div class="relative overflow-hidden mb-6 
+        group-hover:absolute group-hover:inset-0 
+        group-hover:mb-0 transition-all duration-500">
+
+                                <!-- Default Image -->
+                                <img src="./static/images/image.png" class="w-full h-[320px] object-cover
+            group-hover:absolute group-hover:inset-0
+            group-hover:h-full group-hover:w-full
+            transition-all duration-500">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/hero_sub3.png" class="w-full h-[320px] object-cover absolute inset-0
+            opacity-0 group-hover:opacity-100
+            group-hover:h-full group-hover:w-full
+            transition-all duration-500">
+                            </div>
+
+                            <!-- NORMAL CONTENT -->
+                            <div class="group-hover:hidden relative z-10">
+                                <p class="text-gray-400 text-sm mb-1">
+                                    Spices & Flours
+                                </p>
+
+                                <h3 class="text-xl font-playfair mb-2">
+                                    Red Chilli Flour
+                                </h3>
+
+                                <p class="font-semibold text-lg">
+                                    ₹120 / Kg
+                                </p>
+                            </div>
+
+                            <!-- HOVER CARD -->
+                            <div class="absolute inset-0 flex items-end justify-center 
+        opacity-0 group-hover:opacity-100 
+        transition duration-500 z-20">
+
+                                <div class="bg-white w-[75%] shadow-xl mb-8">
+
+                                    <div class="text-center p-6">
+                                        <p class="text-gray-400 text-sm mb-1">
+                                            Spices & Flours
+                                        </p>
+
+                                        <h3 class="text-2xl font-playfair mb-2">
+                                            Red Chilli Flour
+                                        </h3>
+
+                                        <p class="font-semibold text-lg">
+                                            ₹120 / Kg
+                                        </p>
+                                    </div>
+
+                                    <div class="grid grid-cols-3 border-t">
+
+                                        <button onclick="updatePrice(this,0.5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            500 g
+                                        </button>
+
+                                        <button onclick="updatePrice(this,1)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            1 KG
+                                        </button>
+
+                                        <button onclick="updatePrice(this,5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            5 KG
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden">
+
+                            <!-- Image -->
+                            <div class="relative overflow-hidden mb-6 
+        group-hover:absolute group-hover:inset-0 
+        group-hover:mb-0 transition-all duration-500">
+
+                                <!-- Default Image -->
+                                <img src="./static/images/image.png" class="w-full h-[320px] object-cover
+            group-hover:absolute group-hover:inset-0
+            group-hover:h-full group-hover:w-full
+            transition-all duration-500">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/hero_sub3.png" class="w-full h-[320px] object-cover absolute inset-0
+            opacity-0 group-hover:opacity-100
+            group-hover:h-full group-hover:w-full
+            transition-all duration-500">
+                            </div>
+
+                            <!-- NORMAL CONTENT -->
+                            <div class="group-hover:hidden relative z-10">
+                                <p class="text-gray-400 text-sm mb-1">
+                                    Spices & Flours
+                                </p>
+
+                                <h3 class="text-xl font-playfair mb-2">
+                                    Red Chilli Flour
+                                </h3>
+
+                                <p class="font-semibold text-lg">
+                                    ₹120 / Kg
+                                </p>
+                            </div>
+
+                            <!-- HOVER CARD -->
+                            <div class="absolute inset-0 flex items-end justify-center 
+        opacity-0 group-hover:opacity-100 
+        transition duration-500 z-20">
+
+                                <div class="bg-white w-[75%] shadow-xl mb-8">
+
+                                    <div class="text-center p-6">
+                                        <p class="text-gray-400 text-sm mb-1">
+                                            Spices & Flours
+                                        </p>
+
+                                        <h3 class="text-2xl font-playfair mb-2">
+                                            Red Chilli Flour
+                                        </h3>
+
+                                        <p class="font-semibold text-lg">
+                                            ₹120 / Kg
+                                        </p>
+                                    </div>
+
+                                    <div class="grid grid-cols-3 border-t">
+
+                                        <button onclick="updatePrice(this,0.5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            500 g
+                                        </button>
+
+                                        <button onclick="updatePrice(this,1)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            1 KG
+                                        </button>
+
+                                        <button onclick="updatePrice(this,5)"
+                                            class="border-l py-3 flex items-center justify-center hover:bg-gray-100">
+                                            5 KG
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="h-[750px] grid grid-cols-1 md:grid-cols-2">
+
+                <!-- Left Content -->
+                <div
+                    class="bg-[#3f5400] bg-[url('./static/images/bg6.jpg')] bg-cover bg-center bg-blend-multiply text-white flex flex-col justify-center items-center text-center px-10 relative">
+
+                    <p class="uppercase font-medium text-sm tracking-widest mb-4 font-poppins">
+                        100% Natural & Traditional
+                    </p>
+
+                    <h1 class="text-6xl font-playfair leading-tight mb-6 font-playfair">
+                        Pure Coconut <br> Oil
+                    </h1>
+
+                    <p class="text-lg mb-8 max-w-md font-poppins">
+                        Cold pressed coconut oil prepared using traditional methods.
+                        Fresh, natural and perfect for cooking, health and hair care.
+                    </p>
+
+                    <button class="bg-white text-black px-8 py-3 font-semibold hover:bg-gray-200 transition">
+                        ENQUIRE ON WHATSAPP
+                    </button>
+
+                    <!-- Left Vertical Text -->
+                    <div
+                        class="absolute left-20 bottom-0 text-4xl tracking-widest opacity-70 origin-left overflow-hidden h-full">
+                        <div class="scroll-vertical-left whitespace-nowrap">
+                            PURE • NATURAL • TRADITIONAL • PURE • NATURAL • TRADITIONAL
+                        </div>
+                    </div>
+
+                    <!-- Right Vertical Text -->
+                    <div
+                        class="absolute right-20 bottom-0 text-4xl tracking-widest opacity-70 origin-right overflow-hidden h-full">
+                        <div class="scroll-vertical-right whitespace-nowrap">
+                            PURE • NATURAL • TRADITIONAL • PURE • NATURAL • TRADITIONAL
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Right Image -->
+                <div>
+                    <img src="./static/images/coconut3.png" class="w-full h-full object-cover">
+                </div>
+
+            </section>
+
+
+
+
+
+            <section class="w-full border-t border-b border-gray-200 mt-20">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Item 1 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                            <g fill="none" stroke="#677737" stroke-width="1.3">
+                                <path
+                                    d="M19.5 17.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.5 17.5h-5M2 4h10c1.414 0 2.121 0 2.56.44C15 4.878 15 5.585 15 7v8.5m.5-9h1.801c.83 0 1.245 0 1.589.195c.344.194.557.55.984 1.262l1.699 2.83c.212.354.318.532.373.728c.054.197.054.403.054.816V15c0 .935 0 1.402-.201 1.75a1.5 1.5 0 0 1-.549.549c-.348.201-.815.201-1.75.201M2 13v2c0 .935 0 1.402.201 1.75a1.5 1.5 0 0 0 .549.549c.348.201.815.201 1.75.201M2 7h6m-6 3h4" />
+                            </g>
+                        </svg>
+
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            NATURAL INGREDIENTS
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Made with carefully selected natural grains and spices.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                            <g fill="none">
+                                <path fill="#677737"
+                                    d="m10.15 8.802l-.442.606zM12 3.106l-.508.552a.75.75 0 0 0 1.015 0zm1.85 5.696l.442.606zM12 9.676v.75zm-1.408-1.48c-.69-.503-1.427-1.115-1.983-1.76c-.574-.665-.859-1.254-.859-1.721h-1.5c0 1.017.578 1.954 1.223 2.701c.663.768 1.501 1.457 2.235 1.992zM7.75 4.715c0-1.059.52-1.663 1.146-1.873c.652-.22 1.624-.078 2.596.816l1.015-1.104C11.23 1.38 9.704.988 8.418 1.42C7.105 1.862 6.25 3.096 6.25 4.715zm6.542 4.693c.734-.534 1.572-1.224 2.235-1.992c.645-.747 1.223-1.684 1.223-2.701h-1.5c0 .467-.284 1.056-.859 1.721c-.556.645-1.292 1.257-1.982 1.76zm3.458-4.693c0-1.619-.855-2.853-2.167-3.295c-1.286-.432-2.813-.04-4.09 1.134l1.015 1.104c.972-.894 1.945-1.036 2.597-.816c.625.21 1.145.814 1.145 1.873zM9.708 9.408c.755.55 1.354 1.018 2.292 1.018v-1.5c-.365 0-.565-.115-1.408-.73zm3.7-1.212c-.843.615-1.043.73-1.408.73v1.5c.938 0 1.537-.467 2.292-1.018z" />
+                                <path stroke="#677737" stroke-linecap="round" stroke-width="0.8"
+                                    d="M5 20.388h2.26c1.01 0 2.033.106 3.016.308a14.9 14.9 0 0 0 5.33.118c.868-.14 1.72-.355 2.492-.727c.696-.337 1.549-.81 2.122-1.341c.572-.53 1.168-1.397 1.59-2.075c.364-.582.188-1.295-.386-1.728a1.89 1.89 0 0 0-2.22 0l-1.807 1.365c-.7.53-1.465 1.017-2.376 1.162q-.165.026-.345.047m0 0l-.11.012m.11-.012a1 1 0 0 0 .427-.24a1.49 1.49 0 0 0 .126-2.134a1.9 1.9 0 0 0-.45-.367c-2.797-1.669-7.15-.398-9.779 1.467m9.676 1.274a.5.5 0 0 1-.11.012m0 0a9.3 9.3 0 0 1-1.814.004" />
+                                <rect width="3" height="8" x="2" y="14" stroke="#677737" stroke-width="0.8" rx="1.5" />
+                            </g>
+                        </svg>
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            TRADITIONAL METHOD
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Prepared using authentic traditional techniques.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 16 16">
+                            <path fill="#677737"
+                                d="M10.5 10a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM1 5.5A2.5 2.5 0 0 1 3.5 3h9A2.5 2.5 0 0 1 15 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 10.5zM14 6v-.5A1.5 1.5 0 0 0 12.5 4h-9A1.5 1.5 0 0 0 2 5.5V6zM2 7v3.5A1.5 1.5 0 0 0 3.5 12h9a1.5 1.5 0 0 0 1.5-1.5V7z" />
+                        </svg>
+
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            FRESH PRODUCTS
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Freshly prepared flour, masalas and pickles.
+                        </p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                            <g fill="none" stroke="#677737" stroke-width="1.4">
+                                <path
+                                    d="M17 11.805c0-.346 0-.519.052-.673c.151-.448.55-.621.95-.803c.448-.205.672-.307.895-.325c.252-.02.505.034.721.155c.286.16.486.466.69.714c.943 1.146 1.415 1.719 1.587 2.35c.14.51.14 1.044 0 1.553c-.251.922-1.046 1.694-1.635 2.41c-.301.365-.452.548-.642.655a1.27 1.27 0 0 1-.721.155c-.223-.018-.447-.12-.896-.325c-.4-.182-.798-.355-.949-.803c-.052-.154-.052-.327-.052-.672zm-10 0c0-.436-.012-.827-.364-1.133c-.128-.111-.298-.188-.637-.343c-.449-.204-.673-.307-.896-.325c-.667-.054-1.026.402-1.41.87c-.944 1.145-1.416 1.718-1.589 2.35a2.94 2.94 0 0 0 0 1.553c.252.921 1.048 1.694 1.636 2.409c.371.45.726.861 1.363.81c.223-.018.447-.12.896-.325c.34-.154.509-.232.637-.343c.352-.306.364-.697.364-1.132z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20 10.5V9c0-3.866-3.582-7-8-7S4 5.134 4 9v1.5m16 7c0 4.5-4 4.5-8 4.5" />
+                            </g>
+                        </svg>
+
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            DELIVERY AVAILABLE
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Home delivery available across Nilambur area.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <section class="w-full mt-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+
+                    <!-- LEFT CONTENT -->
+                    <div class="px-16 py-20 flex flex-col justify-center">
+
+                        <!-- Small Title -->
+                        <p class="text-sm tracking-widest uppercase text-[#7E4404] mb-6 font-poppins font-medium">
+                            Why Choose Our Products
+                        </p>
+
+                        <!-- Headings -->
+                        <div class="space-y-2 mb-16 ">
+                            <h2 class="text-6xl font-playfair text-black ">Traditional</h2>
+                            <h2 class="text-6xl font-playfair text-gray-400">Pure Ingredients</h2>
+                            <h2 class="text-6xl font-playfair text-gray-400">Freshly Prepared</h2>
+                        </div>
+
+                        <!-- Icon -->
+                        <div class="mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                                <g fill="#677737" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M16.338 8.694a9 9 0 0 1-.997.459q-.32.105-.658.14c-.997.1-1.894-.08-2.802.1a3.7 3.7 0 0 0-1.306.548a3.66 3.66 0 0 0-1.286 1.525a4.06 4.06 0 0 0-.33 1.905a3.4 3.4 0 0 0 1.197 2.413c-.06.199-.14.398-.19.608a.36.36 0 0 0 .19.468a.37.37 0 0 0 .469-.199c.09-.17.22-.29.319-.449c.69.125 1.394.165 2.094.12q.508-.039.997-.18a4.7 4.7 0 0 0 1.885-.997a4.1 4.1 0 0 0 1.166-1.844c.359-1.207.12-5.105-.748-4.617m-.518 4.178a3.8 3.8 0 0 1-1.067 1.526c-.33.283-.7.518-1.097.698q-.481.203-.997.289q-.545.09-1.097.12a.4.4 0 0 0-.2.08c.18-.23.34-.49.52-.709l.597-.718c.2-.229.4-.468.609-.698a15 15 0 0 1 1.595-1.555a.41.41 0 0 0 .12-.558a.42.42 0 0 0-.569-.12c-.708.365-1.376.802-1.994 1.306q-.405.343-.758.738a6 6 0 0 0-.618.857a6 6 0 0 0-.349.728a2.64 2.64 0 0 1-.389-1.505c.028-.365.115-.722.26-1.057c.198-.504.546-.936.997-1.237c.345-.24.74-.4 1.156-.468c.758-.14 1.546-.12 2.344-.29c.291-.066.576-.163.847-.289c.15-.07.3-.17.449-.259a6.04 6.04 0 0 1-.36 3.121" />
+                                    <path
+                                        d="M22.83 7.278c.566-.777.91-1.694.997-2.652a4 4 0 0 0 0-.578a4 4 0 0 0-.11-.579a2.43 2.43 0 0 0-2.134-1.864a4.33 4.33 0 0 0-3.42 1.545a.36.36 0 1 0 .519.489a3.68 3.68 0 0 1 2.293-.937a1.346 1.346 0 0 1 1.436 1.126l.06.718a4.27 4.27 0 0 1-.679 2.064q-.458.73-1.017 1.386a42 42 0 0 0-.797-2.991a.36.36 0 0 0-.43-.27a.33.33 0 0 0-.238.23c-.4 0-.798 0-1.197-.07s-.997-.12-1.515-.18a6 6 0 0 0 0-.707a4.45 4.45 0 0 0-.798-2.094A4.64 4.64 0 0 0 11.622.02a4.16 4.16 0 0 0-3.46 2.99a6.7 6.7 0 0 0-.27 1.855v.19l-1.365.2a.36.36 0 0 0-.34.378v.08c0 .08-.079.07-.099.12c-.14.568-.309 1.166-.468 1.734c-.36 1.337-.649 2.693-.998 3.989c-.199.708-.398 1.416-.558 2.134c-.12.478-.21.997-.29 1.465l-.368 3.051q-.13.673-.17 1.356c.01.273.074.541.19.788c.214.407.568.723.997.888c.362.135.741.219 1.127.249c-.621.462-1.325.8-2.074.997q-.236.065-.479.08a2 2 0 0 1-.439 0c-.857-.1-1.286-.539-1.346-1.137a3.24 3.24 0 0 1 .758-2.213a.34.34 0 0 0 0-.499a.37.37 0 0 0-.508 0a3.74 3.74 0 0 0-1.247 3.46A2.47 2.47 0 0 0 2.28 23.95q.302.054.608.05q.436-.01.858-.11a7.7 7.7 0 0 0 2.902-1.595c.239-.2.448-.44.668-.659c.817 0 1.635.05 2.452 0c1.596 0 3.191-.14 4.757-.199c1.386-.06 2.861 0 4.317-.08a15.3 15.3 0 0 0 2.922-.399a.41.41 0 0 0 .309-.488a.46.46 0 0 0-.17-.24c0-1.764-.05-3.53-.15-5.284c-.05-.778-.11-1.556-.189-2.323c-.08-.768-.19-1.556-.319-2.324a42 42 0 0 0-.23-1.076a14 14 0 0 0 1.815-1.945M9.228 3.39a3.06 3.06 0 0 1 2.553-1.995a3.49 3.49 0 0 1 3.08 1.227c.365.44.612.964.719 1.525c0 .14 0 .29.05.44c-.2 0-.4 0-.609-.06c-1.147 0-2.283 0-3.42.07c-.917.069-1.825.189-2.732.318A5.6 5.6 0 0 1 9.23 3.39m9.582 17.02c-1.446 0-2.921-.1-4.307-.1H8.6c.439-.488.857-.997 1.256-1.415a.42.42 0 0 0 0-.579a.43.43 0 0 0-.578 0c-.658.608-1.396 1.286-2.154 1.994h-.488a9 9 0 0 1-1.327-.1c-.279-.05-.568-.1-.678-.338a.76.76 0 0 1-.06-.37c0-.338.11-.687.14-.996l.25-3.071c0-.47.12-.928.199-1.396c.12-.708.27-1.406.429-2.104c.299-1.346.518-2.732.807-4.088c.12-.569.26-1.137.429-1.695v-.09h1.127q.058.797.2 1.585a.35.35 0 0 0 .398.31a.36.36 0 0 0 .31-.4a15 15 0 0 1 0-1.495c4.665 0 3.987-.11 6.201-.14h.718V7.14a.41.41 0 0 0 .808 0c0-.4.07-.838.09-1.267h2.741c.13.808.25 1.616.34 2.423c0 .32.06.648.099.997l-.319.36a.42.42 0 0 0 0 .578a.39.39 0 0 0 .399.06v.488c.09.808.17 1.625.269 2.433c.29 2.383.608 4.766.838 7.17q-1.116.102-2.234.03" />
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-700 text-lg leading-relaxed max-w-xl">
+                            We prepare our products using carefully selected natural ingredients
+                            and traditional methods. From healthy flour mixes and masala powders
+                            to pure coconut oil and homemade pickles, every product is made fresh
+                            with quality and hygiene you can trust.
+                        </p>
+
+                    </div>
+
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="h-[600px] w-full">
+                        <img src="./static/images/bg7.jpg" class="w-full h-full object-cover"
+                            alt="Flour Mill Preparation">
+                    </div>
+
+                </div>
+            </section>
+
+
+
+        </div>
+
+    </div>
+
+    <section class="relative bg-cover bg-center py-20" style="background-image:url('./static/images/bg5.jpg')">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-[#3f5400]/70"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+            <h2 class="text-white text-5xl font-playfair leading-snug">
+                Get in Touch With Us <br>
+                For Pure Coconut Oil Products
+            </h2>
+
+            <a href="/contact">
+                <button
+                    class="bg-[#7E4404] border-[2px] border-white px-10 py-4 text-white font-semibold tracking-widest">
+                    CONTACT
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="bg-[#1f1f1f] text-gray-300 pt-16">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 pb-16">
+
+            <!-- Logo -->
+            <div>
+                <img src="./static/images/eks_logo.png" alt="Eks Place Logo" class="mb-4 w-36">
+
+                <p class="text-sm mb-6 font-poppins">
+                    Eks Place provides high quality natural coconut oil products made with traditional methods.
+                </p>
+
+                <p class="uppercase text-md mb-3 tracking-widest font-poppins">Follow Us</p>
+
+                <div class="flex gap-3 ">
+                    <div class="bg-gray-700 p-3">F</div>
+                    <div class="bg-gray-700 p-3">I</div>
+                    <div class="bg-gray-700 p-3">X</div>
+                </div>
+            </div>
+
+
+            <!-- Navigation -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Navigation</h3>
+                <ul class="space-y-6 text-md font-poppins">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Products</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+
+            <!-- Specifications -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Specifications</h3>
+                <ul class="space-y-6 text-md font-poppins">
+                    <li>100% Pure Products</li>
+                    <li>Traditional Preparation</li>
+                    <li>Fresh Ingredients</li>
+                    <li>Nilambur Delivery</li>
+                    <li>Export Packing Available</li>
+                </ul>
+            </div>
+
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Contact</h3>
+
+                <p class="text-md font-poppins mb-6">
+                    Kerala, India
+                </p>
+
+                <p class="space-y-6 text-md font-poppins mb-6">
+                    +91 98765 43210
+                </p>
+
+                <p class="space-y-6 text-md font-poppins">
+                    info@eksplace.com
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-700 py-6 text-center text-sm">
+            © 2025 All Rights Reserved. Powered by Cybexel
+        </div>
+
+    </footer>
+
+    <script src="./static/js/script.js"></script>
+</body>
+
+</html>

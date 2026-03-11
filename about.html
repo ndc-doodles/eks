@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Organic Tea</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="bg-[#7E4404] text-center text-sm py-2 text-white font-poppins">
+        Free shipping on all orders of $80 or more.
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="relative flex items-center justify-between px-20 py-3 border-b">
+
+        <!-- Menu -->
+        <nav class="hidden md:flex gap-8 font-medium text-black text-[15px] font-poppins">
+            <a href="index.html">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">ABOUT</a>
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+        <!-- Center Logo -->
+        <div class="absolute left-1/2 transform -translate-x-1/2">
+            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-12 w-auto object-contain">
+        </div>
+
+        <!-- Enquiry Button -->
+        <div class="flex items-center">
+            <button
+                class="bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+                ENQUIRY
+            </button>
+        </div>
+
+    </header>
+    <section class="relative bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
+
+            <!-- Breadcrumb -->
+            <div class="text-md text-gray-200 text-left mb-16 font-poppins">
+                Home <span class="mx-2">›</span> About
+            </div>
+
+            <p class="uppercase tracking-[3px] text-sm font-medium mb-6 font-poppins">
+                About Us
+            </p>
+
+            <h1 class="text-6xl mb-8 font-playfair">
+                About Eks Place
+            </h1>
+
+            <p class="text-md text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
+                Eks Place is dedicated to providing the finest natural coconut oil products, crafted with traditional
+                methods and utmost care. Our mission is to bring purity, quality and wellness to every home we reach.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="relative overflow-hidden py-20">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="./static/images/bg3.png" class="w-full h-full object-cover opacity-10" alt="background">
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="relative">
+
+            <section class=" px-16">
+                <div class="grid lg:grid-cols-2 ">
+
+                    <!-- LEFT CONTENT -->
+                    <div class="flex items-center justify-center ">
+                        <div class="max-w-xl text-center">
+
+                            <p class="uppercase font-poppins font-semibold tracking-[3px] text-sm mb-6 text-[#7E4404]">
+                                Our Story
+                            </p>
+
+                            <h2 class="text-6xl font-playfair mb-8">
+                                Serving Tradition Since <span class="font-poppins text-5xl">1983</span>
+                            </h2>
+
+                            <p class="text-gray-600 font-poppins leading-relaxed mb-6">
+                                We started as a small family-run mill, bringing the finest natural
+                                flours, spices, and oils to every kitchen. Our products are handcrafted
+                                with care, using traditional methods passed down through generations.
+                            </p>
+
+                            <p class="text-gray-600 font-poppins leading-relaxed mb-10">
+                                From pure coconut oil to millet mixes and homemade pickles, everything
+                                we make is fresh, natural, and packed with love for your family.
+                            </p>
+
+                            <button class="font-poppins [#7E4404] text-white px-10 py-4 tracking-widest">
+                                CONTACT US
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="h-[700px]">
+                        <img src="./static/images/bg9.png" class="w-full h-full object-cover">
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Products / Highlights Section -->
+            <section class="py-24">
+                <div class="w-full  mx-auto px-20">
+
+                    <p
+                        class="text-center text-sm font-poppins font-semibold text-[#7E4404] mb-6 uppercase tracking-widest">
+                        Pure & Traditional
+                    </p>
+                    <!-- Section Heading -->
+                    <h2 class="text-center font-playfair text-4xl mb-20">
+                        Experience the Tradition<br>in Every Product
+                    </h2>
+
+                    <!-- Cards Grid -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                        <!-- Card 1: Flours -->
+                        <div class="text-center">
+                            <img src="./static/images/millet.jpg" class="w-full h-[400px] object-cover mb-6"
+                                alt="Millet and Ragi Flour">
+
+                            <p class="uppercase font-poppins tracking-widest text-sm mb-2 font-semibold text-[#7E4404]">
+                                Authentic
+                            </p>
+
+                            <h3 class="text-2xl font-playfair mb-4 ">
+                                Traditional Flours
+                            </h3>
+                            <p class=" font-poppins  text-sm mb-2">
+                                Millet, Ragi, and other healthy grains
+                            </p>
+                        </div>
+
+                        <!-- Card 2: Coconut Oils -->
+                        <div class="text-center">
+                            <img src="./static/images/coconut4.jpg" class="w-full h-[400px] object-cover mb-6"
+                                alt="Pure Coconut Oil">
+
+                            <p class="uppercase font-poppins tracking-widest text-sm mb-2 font-semibold text-[#7E4404]">
+                                Pure
+                            </p>
+
+                            <h3 class="text-2xl font-playfair mb-4">
+                                Coconut & Oils
+                            </h3>
+                            <p class=" font-poppins  text-sm mb-2">
+                                Cold-pressed and 100% natural oils
+                            </p>
+                        </div>
+
+                        <!-- Card 3: Masalas -->
+                        <div class="text-center">
+                            <img src="./static/images/masala.jpg" class="w-full h-[400px] object-cover mb-6"
+                                alt="Traditional Masala Powders">
+
+                            <p class="uppercase font-poppins tracking-widest text-sm mb-2 font-semibold text-[#7E4404]">
+                                Fresh
+                            </p>
+
+                            <h3 class="text-2xl font-playfair mb-4">
+                                Masala Powders
+                            </h3>
+                            <p class=" font-poppins  text-sm mb-2">
+                                Homemade masalas for authentic taste
+                            </p>
+                        </div>
+
+                        <!-- Card 4: Pickles & Chutneys -->
+                        <div class="text-center">
+                            <img src="./static/images/pickle.jpg" class="w-full h-[400px] object-cover mb-6"
+                                alt="Homemade Pickles">
+
+                            <p
+                                class="uppercase font-poppins font-semibold text-[#7E4404] tracking-widest text-sm mb-2 ">
+                                Handmade
+                            </p>
+
+                            <h3 class="text-2xl font-playfair mb-4">
+                                Pickles
+                            </h3>
+                            <p class=" font-poppins  text-sm mb-2">
+                                Freshly made traditional flavors
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section class="bg-[#3f5400] py-8 overflow-hidden">
+                <div class="relative">
+
+                    <!-- Marquee wrapper -->
+                    <div class="marquee flex">
+                        <!-- First copy of content -->
+                        <div class="marquee-content text-white text-2xl flex whitespace-nowrap">
+                            <span class="mx-10">BLEND FOR PEOPLE & PLANET</span>
+                            <span class="mx-10"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#fff" stroke-width="1" stroke="#fff"><path d="M4.45 6.52a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71C6.47 3.3 9.61 2 12.96 2c1.23 0 2.46.18 3.63.54a.5.5 0 0 1 .33.62c-.08.27-.36.42-.62.33A11.8 11.8 0 0 0 12.96 3C9.88 3 6.98 4.2 4.81 6.38c-.1.1-.23.14-.36.14"/><path d="M2.5 16.48c-.28 0-.5-.22-.5-.5C2 9.94 6.92 5.02 12.96 5.02c.28 0 .5.22.5.5s-.22.5-.5.5C7.47 6.02 3 10.49 3 15.98c0 .28-.22.5-.5.5m19.81 0c0 .28.22.5.5.5c1.49 0 2.92-.45 4.13-1.31A7.2 7.2 0 0 0 30 9.78c0-.27-.22-.5-.5-.5s-.5.22-.5.5c0 2.02-.99 3.91-2.63 5.08a6.2 6.2 0 0 1-3.56 1.12c-.28 0-.5.22-.5.5"/><path d="m6.5 15.087l.876.913h7.07c6.443 0 11.584 5.487 11.584 12.14v.63c0 1.193-.932 2.25-2.188 2.25h-7.258C10.14 31.02 5 25.533 5 18.88v-5.75c0-.41.34-.75.75-.75s.75.34.75.75zM16.584 29.02h7.258a.16.16 0 0 0 .115-.055a.28.28 0 0 0 .073-.195v-.63c0-5.647-4.34-10.14-9.584-10.14H7.148q.184.173.412.3l11.9 6.5c.36.2.5.65.3 1.02c-.13.25-.39.39-.65.39q-.18 0-.36-.09l-11.718-6.4c.405 5.246 4.572 9.3 9.552 9.3M28 2.53c0-.28-.23-.51-.51-.51s-.51.23-.51.51v1.722l-.317.248h-4.98c-4.323 0-7.773 3.785-7.773 8.2v.43c0 .728.572 1.35 1.319 1.35h4.999c4.31 0 7.772-3.622 7.772-8.05zM26.801 5.5c-.125.222-.311.41-.541.54l-8.08 4.41c-.25.13-.34.44-.2.69a.514.514 0 0 0 .69.21l8.08-4.41a3 3 0 0 0 .242-.154c-.179 3.745-3.155 6.694-6.764 6.694h-5c-.158 0-.318-.138-.318-.35v-.43c0-3.925 3.062-7.2 6.772-7.2z"/></g></svg></span>
+                            <span class="mx-10">WE BLEND FOR PEOPLE & PLANET</span>
+                            <span class="mx-10"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#fff" stroke-width="1" stroke="#fff"><path d="M4.45 6.52a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71C6.47 3.3 9.61 2 12.96 2c1.23 0 2.46.18 3.63.54a.5.5 0 0 1 .33.62c-.08.27-.36.42-.62.33A11.8 11.8 0 0 0 12.96 3C9.88 3 6.98 4.2 4.81 6.38c-.1.1-.23.14-.36.14"/><path d="M2.5 16.48c-.28 0-.5-.22-.5-.5C2 9.94 6.92 5.02 12.96 5.02c.28 0 .5.22.5.5s-.22.5-.5.5C7.47 6.02 3 10.49 3 15.98c0 .28-.22.5-.5.5m19.81 0c0 .28.22.5.5.5c1.49 0 2.92-.45 4.13-1.31A7.2 7.2 0 0 0 30 9.78c0-.27-.22-.5-.5-.5s-.5.22-.5.5c0 2.02-.99 3.91-2.63 5.08a6.2 6.2 0 0 1-3.56 1.12c-.28 0-.5.22-.5.5"/><path d="m6.5 15.087l.876.913h7.07c6.443 0 11.584 5.487 11.584 12.14v.63c0 1.193-.932 2.25-2.188 2.25h-7.258C10.14 31.02 5 25.533 5 18.88v-5.75c0-.41.34-.75.75-.75s.75.34.75.75zM16.584 29.02h7.258a.16.16 0 0 0 .115-.055a.28.28 0 0 0 .073-.195v-.63c0-5.647-4.34-10.14-9.584-10.14H7.148q.184.173.412.3l11.9 6.5c.36.2.5.65.3 1.02c-.13.25-.39.39-.65.39q-.18 0-.36-.09l-11.718-6.4c.405 5.246 4.572 9.3 9.552 9.3M28 2.53c0-.28-.23-.51-.51-.51s-.51.23-.51.51v1.722l-.317.248h-4.98c-4.323 0-7.773 3.785-7.773 8.2v.43c0 .728.572 1.35 1.319 1.35h4.999c4.31 0 7.772-3.622 7.772-8.05zM26.801 5.5c-.125.222-.311.41-.541.54l-8.08 4.41c-.25.13-.34.44-.2.69a.514.514 0 0 0 .69.21l8.08-4.41a3 3 0 0 0 .242-.154c-.179 3.745-3.155 6.694-6.764 6.694h-5c-.158 0-.318-.138-.318-.35v-.43c0-3.925 3.062-7.2 6.772-7.2z"/></g></svg></span>
+                        </div>
+
+                        <!-- Second copy of content (for seamless loop) -->
+                        <div class="marquee-content text-white text-2xl flex whitespace-nowrap">
+                            <span class="mx-10">BLEND FOR PEOPLE & PLANET</span>
+                            <span class="mx-10"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#fff" stroke-width="1" stroke="#fff"><path d="M4.45 6.52a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71C6.47 3.3 9.61 2 12.96 2c1.23 0 2.46.18 3.63.54a.5.5 0 0 1 .33.62c-.08.27-.36.42-.62.33A11.8 11.8 0 0 0 12.96 3C9.88 3 6.98 4.2 4.81 6.38c-.1.1-.23.14-.36.14"/><path d="M2.5 16.48c-.28 0-.5-.22-.5-.5C2 9.94 6.92 5.02 12.96 5.02c.28 0 .5.22.5.5s-.22.5-.5.5C7.47 6.02 3 10.49 3 15.98c0 .28-.22.5-.5.5m19.81 0c0 .28.22.5.5.5c1.49 0 2.92-.45 4.13-1.31A7.2 7.2 0 0 0 30 9.78c0-.27-.22-.5-.5-.5s-.5.22-.5.5c0 2.02-.99 3.91-2.63 5.08a6.2 6.2 0 0 1-3.56 1.12c-.28 0-.5.22-.5.5"/><path d="m6.5 15.087l.876.913h7.07c6.443 0 11.584 5.487 11.584 12.14v.63c0 1.193-.932 2.25-2.188 2.25h-7.258C10.14 31.02 5 25.533 5 18.88v-5.75c0-.41.34-.75.75-.75s.75.34.75.75zM16.584 29.02h7.258a.16.16 0 0 0 .115-.055a.28.28 0 0 0 .073-.195v-.63c0-5.647-4.34-10.14-9.584-10.14H7.148q.184.173.412.3l11.9 6.5c.36.2.5.65.3 1.02c-.13.25-.39.39-.65.39q-.18 0-.36-.09l-11.718-6.4c.405 5.246 4.572 9.3 9.552 9.3M28 2.53c0-.28-.23-.51-.51-.51s-.51.23-.51.51v1.722l-.317.248h-4.98c-4.323 0-7.773 3.785-7.773 8.2v.43c0 .728.572 1.35 1.319 1.35h4.999c4.31 0 7.772-3.622 7.772-8.05zM26.801 5.5c-.125.222-.311.41-.541.54l-8.08 4.41c-.25.13-.34.44-.2.69a.514.514 0 0 0 .69.21l8.08-4.41a3 3 0 0 0 .242-.154c-.179 3.745-3.155 6.694-6.764 6.694h-5c-.158 0-.318-.138-.318-.35v-.43c0-3.925 3.062-7.2 6.772-7.2z"/></g></svg></span>
+                            <span class="mx-10">WE BLEND FOR PEOPLE & PLANET</span>
+                            <span class="mx-10"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="#fff" stroke-width="1" stroke="#fff"><path d="M4.45 6.52a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71C6.47 3.3 9.61 2 12.96 2c1.23 0 2.46.18 3.63.54a.5.5 0 0 1 .33.62c-.08.27-.36.42-.62.33A11.8 11.8 0 0 0 12.96 3C9.88 3 6.98 4.2 4.81 6.38c-.1.1-.23.14-.36.14"/><path d="M2.5 16.48c-.28 0-.5-.22-.5-.5C2 9.94 6.92 5.02 12.96 5.02c.28 0 .5.22.5.5s-.22.5-.5.5C7.47 6.02 3 10.49 3 15.98c0 .28-.22.5-.5.5m19.81 0c0 .28.22.5.5.5c1.49 0 2.92-.45 4.13-1.31A7.2 7.2 0 0 0 30 9.78c0-.27-.22-.5-.5-.5s-.5.22-.5.5c0 2.02-.99 3.91-2.63 5.08a6.2 6.2 0 0 1-3.56 1.12c-.28 0-.5.22-.5.5"/><path d="m6.5 15.087l.876.913h7.07c6.443 0 11.584 5.487 11.584 12.14v.63c0 1.193-.932 2.25-2.188 2.25h-7.258C10.14 31.02 5 25.533 5 18.88v-5.75c0-.41.34-.75.75-.75s.75.34.75.75zM16.584 29.02h7.258a.16.16 0 0 0 .115-.055a.28.28 0 0 0 .073-.195v-.63c0-5.647-4.34-10.14-9.584-10.14H7.148q.184.173.412.3l11.9 6.5c.36.2.5.65.3 1.02c-.13.25-.39.39-.65.39q-.18 0-.36-.09l-11.718-6.4c.405 5.246 4.572 9.3 9.552 9.3M28 2.53c0-.28-.23-.51-.51-.51s-.51.23-.51.51v1.722l-.317.248h-4.98c-4.323 0-7.773 3.785-7.773 8.2v.43c0 .728.572 1.35 1.319 1.35h4.999c4.31 0 7.772-3.622 7.772-8.05zM26.801 5.5c-.125.222-.311.41-.541.54l-8.08 4.41c-.25.13-.34.44-.2.69a.514.514 0 0 0 .69.21l8.08-4.41a3 3 0 0 0 .242-.154c-.179 3.745-3.155 6.694-6.764 6.694h-5c-.158 0-.318-.138-.318-.35v-.43c0-3.925 3.062-7.2 6.772-7.2z"/></g></svg></span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+             <section class="w-full border-t border-b border-gray-200 mt-20">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Item 1 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                            <g fill="none" stroke="#677737" stroke-width="1.3">
+                                <path
+                                    d="M19.5 17.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.5 17.5h-5M2 4h10c1.414 0 2.121 0 2.56.44C15 4.878 15 5.585 15 7v8.5m.5-9h1.801c.83 0 1.245 0 1.589.195c.344.194.557.55.984 1.262l1.699 2.83c.212.354.318.532.373.728c.054.197.054.403.054.816V15c0 .935 0 1.402-.201 1.75a1.5 1.5 0 0 1-.549.549c-.348.201-.815.201-1.75.201M2 13v2c0 .935 0 1.402.201 1.75a1.5 1.5 0 0 0 .549.549c.348.201.815.201 1.75.201M2 7h6m-6 3h4" />
+                            </g>
+                        </svg>
+
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            NATURAL INGREDIENTS
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Made with carefully selected natural grains and spices.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                            <g fill="none">
+                                <path fill="#677737"
+                                    d="m10.15 8.802l-.442.606zM12 3.106l-.508.552a.75.75 0 0 0 1.015 0zm1.85 5.696l.442.606zM12 9.676v.75zm-1.408-1.48c-.69-.503-1.427-1.115-1.983-1.76c-.574-.665-.859-1.254-.859-1.721h-1.5c0 1.017.578 1.954 1.223 2.701c.663.768 1.501 1.457 2.235 1.992zM7.75 4.715c0-1.059.52-1.663 1.146-1.873c.652-.22 1.624-.078 2.596.816l1.015-1.104C11.23 1.38 9.704.988 8.418 1.42C7.105 1.862 6.25 3.096 6.25 4.715zm6.542 4.693c.734-.534 1.572-1.224 2.235-1.992c.645-.747 1.223-1.684 1.223-2.701h-1.5c0 .467-.284 1.056-.859 1.721c-.556.645-1.292 1.257-1.982 1.76zm3.458-4.693c0-1.619-.855-2.853-2.167-3.295c-1.286-.432-2.813-.04-4.09 1.134l1.015 1.104c.972-.894 1.945-1.036 2.597-.816c.625.21 1.145.814 1.145 1.873zM9.708 9.408c.755.55 1.354 1.018 2.292 1.018v-1.5c-.365 0-.565-.115-1.408-.73zm3.7-1.212c-.843.615-1.043.73-1.408.73v1.5c.938 0 1.537-.467 2.292-1.018z" />
+                                <path stroke="#677737" stroke-linecap="round" stroke-width="0.8"
+                                    d="M5 20.388h2.26c1.01 0 2.033.106 3.016.308a14.9 14.9 0 0 0 5.33.118c.868-.14 1.72-.355 2.492-.727c.696-.337 1.549-.81 2.122-1.341c.572-.53 1.168-1.397 1.59-2.075c.364-.582.188-1.295-.386-1.728a1.89 1.89 0 0 0-2.22 0l-1.807 1.365c-.7.53-1.465 1.017-2.376 1.162q-.165.026-.345.047m0 0l-.11.012m.11-.012a1 1 0 0 0 .427-.24a1.49 1.49 0 0 0 .126-2.134a1.9 1.9 0 0 0-.45-.367c-2.797-1.669-7.15-.398-9.779 1.467m9.676 1.274a.5.5 0 0 1-.11.012m0 0a9.3 9.3 0 0 1-1.814.004" />
+                                <rect width="3" height="8" x="2" y="14" stroke="#677737" stroke-width="0.8" rx="1.5" />
+                            </g>
+                        </svg>
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            TRADITIONAL METHOD
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Prepared using authentic traditional techniques.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 16 16">
+                            <path fill="#677737"
+                                d="M10.5 10a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zM1 5.5A2.5 2.5 0 0 1 3.5 3h9A2.5 2.5 0 0 1 15 5.5v5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 10.5zM14 6v-.5A1.5 1.5 0 0 0 12.5 4h-9A1.5 1.5 0 0 0 2 5.5V6zM2 7v3.5A1.5 1.5 0 0 0 3.5 12h9a1.5 1.5 0 0 0 1.5-1.5V7z" />
+                        </svg>
+
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            FRESH PRODUCTS
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Freshly prepared flour, masalas and pickles.
+                        </p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex flex-col items-center text-center py-16 px-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24">
+                            <g fill="none" stroke="#677737" stroke-width="1.4">
+                                <path
+                                    d="M17 11.805c0-.346 0-.519.052-.673c.151-.448.55-.621.95-.803c.448-.205.672-.307.895-.325c.252-.02.505.034.721.155c.286.16.486.466.69.714c.943 1.146 1.415 1.719 1.587 2.35c.14.51.14 1.044 0 1.553c-.251.922-1.046 1.694-1.635 2.41c-.301.365-.452.548-.642.655a1.27 1.27 0 0 1-.721.155c-.223-.018-.447-.12-.896-.325c-.4-.182-.798-.355-.949-.803c-.052-.154-.052-.327-.052-.672zm-10 0c0-.436-.012-.827-.364-1.133c-.128-.111-.298-.188-.637-.343c-.449-.204-.673-.307-.896-.325c-.667-.054-1.026.402-1.41.87c-.944 1.145-1.416 1.718-1.589 2.35a2.94 2.94 0 0 0 0 1.553c.252.921 1.048 1.694 1.636 2.409c.371.45.726.861 1.363.81c.223-.018.447-.12.896-.325c.34-.154.509-.232.637-.343c.352-.306.364-.697.364-1.132z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20 10.5V9c0-3.866-3.582-7-8-7S4 5.134 4 9v1.5m16 7c0 4.5-4 4.5-8 4.5" />
+                            </g>
+                        </svg>
+
+
+                        <h3 class="text-md font-medium tracking-widest mb-3 mt-4 font-poppins">
+                            DELIVERY AVAILABLE
+                        </h3>
+
+                        <p class="text-gray-600 text-sm font-poppins">
+                            Home delivery available across Nilambur area.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+           
+        </div>
+    </div>
+
+    <section class="relative bg-cover bg-center py-20" style="background-image:url('./static/images/bg5.jpg')">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-[#3f5400]/70"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+            <h2 class="text-white text-5xl font-playfair leading-snug">
+                Get in Touch With Us <br>
+                For Pure Coconut Oil Products
+            </h2>
+
+            <a href="/contact">
+                <button
+                    class="bg-[#7E4404] border-[2px] border-white px-10 py-4 text-white font-semibold tracking-widest">
+                    CONTACT
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="bg-[#1f1f1f] text-gray-300 pt-16">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 pb-16">
+
+            <!-- Logo -->
+            <div>
+                <img src="./static/images/eks_logo.png" alt="Eks Place Logo" class="mb-4 w-36">
+
+                <p class="text-sm mb-6 font-poppins">
+                    Eks Place provides high quality natural coconut oil products made with traditional methods.
+                </p>
+
+                <p class="uppercase text-md mb-3 tracking-widest font-poppins">Follow Us</p>
+
+                <div class="flex gap-3 ">
+                    <div class="bg-gray-700 p-3">F</div>
+                    <div class="bg-gray-700 p-3">I</div>
+                    <div class="bg-gray-700 p-3">X</div>
+                </div>
+            </div>
+
+
+            <!-- Navigation -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Navigation</h3>
+                <ul class="space-y-6 text-md font-poppins">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Products</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+
+            <!-- Specifications -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Specifications</h3>
+                <ul class="space-y-6 text-md font-poppins">
+                    <li>100% Pure Products</li>
+                    <li>Traditional Preparation</li>
+                    <li>Fresh Ingredients</li>
+                    <li>Nilambur Delivery</li>
+                    <li>Export Packing Available</li>
+                </ul>
+            </div>
+
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Contact</h3>
+
+                <p class="text-md font-poppins mb-6">
+                    Kerala, India
+                </p>
+
+                <p class="space-y-6 text-md font-poppins mb-6">
+                    +91 98765 43210
+                </p>
+
+                <p class="space-y-6 text-md font-poppins">
+                    info@eksplace.com
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-700 py-6 text-center text-sm">
+            © 2025 All Rights Reserved. Powered by Cybexel
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
