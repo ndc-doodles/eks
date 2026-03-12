@@ -203,5 +203,37 @@ Kindly share more details.`;
     const whatsappNumber = "916282841789";
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
+document.querySelectorAll('.product-card').forEach(card => {
+  const hoverDiv = card.querySelector('.absolute.inset-0.flex.items-end'); 
+  if (!hoverDiv) return; // safety check
 
+  card.addEventListener('click', (e) => {
+    if (window.innerWidth < 640) { 
+      e.stopPropagation();
+      const isVisible = hoverDiv.classList.contains('opacity-100');
+      if (isVisible) {
+        hoverDiv.classList.remove('opacity-100');
+        hoverDiv.classList.add('opacity-0');
+      } else {
+        // Hide other open hover cards
+        document.querySelectorAll('.product-card .absolute.inset-0.flex.items-end').forEach(h => {
+          h.classList.remove('opacity-100');
+          h.classList.add('opacity-0');
+        });
+        hoverDiv.classList.remove('opacity-0');
+        hoverDiv.classList.add('opacity-100');
+      }
+    }
+  });
+});
+document.addEventListener('click', () => {
+  if (window.innerWidth < 640) {
+    document.querySelectorAll('.product-card .absolute.inset-0.flex.items-end').forEach(h => {
+      if (h) {
+        h.classList.remove('opacity-100');
+        h.classList.add('opacity-0');
+      }
+    });
+  }
+});
 });
