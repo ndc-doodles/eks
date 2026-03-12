@@ -32,16 +32,14 @@
 <body>
 
     <!-- TOP BAR -->
-
-    <div class="bg-[#7E4404] text-center text-sm py-2 text-white font-poppins">
-        Free shipping on all orders of $80 or more.
+    <div class="bg-[#7E4404] text-center text-xs md:text-sm py-2 text-white font-poppins">
+        Pure grains. Fresh milling. Better taste.
     </div>
 
-
     <!-- HEADER -->
-    <header class="relative flex items-center justify-between px-20 py-3 border-b">
+    <header class="relative flex items-center justify-between px-6 md:px-20 py-3 border-b">
 
-        <!-- Menu -->
+        <!-- Left Menu (Desktop) -->
         <nav class="hidden md:flex gap-8 font-medium text-black text-[15px] font-poppins">
             <a href="index.html">HOME</a>
             <a href="products.html">PRODUCTS</a>
@@ -49,23 +47,59 @@
             <a href="contact.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">
                 CONTACT
             </a>
-
         </nav>
 
         <!-- Center Logo -->
-        <div class="absolute left-1/2 transform -translate-x-1/2">
-            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-12 w-auto object-contain">
+        <div class="absolute left-1/2 -translate-x-1/2">
+            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-10 md:h-12 w-auto object-contain">
         </div>
 
-        <!-- Enquiry Button -->
-        <div class="flex items-center">
-            <button
-                class="bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+        <!-- Right Side -->
+        <div class="flex items-center gap-4 ml-auto">
+
+            <!-- Enquiry Button -->
+            <button onclick="sendEnquiry()"
+                class="hidden md:block bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
                 ENQUIRY
             </button>
+
+            <button id="menuBtn" class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
         </div>
 
     </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/40 hidden md:hidden z-40"></div>
+
+    <div id="mobileMenu"
+        class="fixed z-50 top-0 right-0 h-full w-[70%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 md:hidden">
+
+        <!-- Close Button -->
+        <div class="flex justify-end p-6">
+            <button id="closeMenu" class="text-4xl text-[#7E4404] font-medium">&times;</button>
+        </div>
+
+        <div class="flex flex-col px-8 gap-6 font-poppins text-lg">
+
+            <a href="index.html">HOME</a>
+            <a href="products.html">PRODUCTS</a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html" class="underline underline-offset-4 decoration-[#7E4404]">CONTACT</a>
+
+            <button onclick="sendEnquiry()" class="bg-[#7E4404] text-white px-6 py-2 rounded-md mt-4">
+                ENQUIRY
+            </button>
+
+        </div>
+
+    </div>
+
+
 
     <section class="relative bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
 
@@ -75,19 +109,19 @@
         <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
 
             <!-- Breadcrumb -->
-            <div class="text-md text-gray-200 text-left mb-16 font-poppins">
+            <div class="text-sm md:text-lg text-gray-200 text-left mb-16 font-poppins">
                 Home <span class="mx-2">›</span> Contact
             </div>
 
-            <p class="uppercase tracking-[3px] text-sm font-medium mb-6 font-poppins">
+            <p class="uppercase md:tracking-[2px] text-sm font-medium mb-6 font-poppins">
                 Contact Us
             </p>
 
-            <h1 class="text-6xl font-playfair mb-8">
+            <h1 class="text-4xl md:text-6xl font-semibold font-playfair mb-8">
                 We'd love to hear from you
             </h1>
 
-            <p class="text-md text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
+            <p class="text-sm md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
                 We’d love to hear from you. Please fill out the form below with the
                 email address used to place your order, and we’ll get back to you as
                 soon as possible.
@@ -100,63 +134,58 @@
     <section class=" py-20">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-            <!-- LEFT FORM -->
-            <div>
+            <form id="contactForm" class="space-y-8 font-poppins">
 
-                <form class="space-y-8 font-poppins">
+                <!-- Name -->
+                <div>
+                    <label class="block text-sm tracking-widest font-medium mb-3">
+                        YOUR NAME <span class="text-red-500">*</span>
+                    </label>
 
-                    <!-- Name -->
-                    <div>
-                        <label class="block text-sm tracking-widest font-medium mb-3">
-                            YOUR NAME <span class="text-red-500">*</span>
-                        </label>
+                    <input id="name" type="text" placeholder="Full Name"
+                        class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black">
+                </div>
 
-                        <input type="text" placeholder="Full Name"
-                            class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black">
-                    </div>
+                <!-- Email -->
+                <div>
+                    <label class="block text-sm tracking-widest font-medium mb-3">
+                        EMAIL <span class="text-red-500">*</span>
+                    </label>
 
-                    <!-- Email -->
-                    <div>
-                        <label class="block text-sm tracking-widest font-medium mb-3">
-                            EMAIL <span class="text-red-500">*</span>
-                        </label>
+                    <input id="email" type="email" placeholder="name@example.com"
+                        class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black">
+                </div>
 
-                        <input type="email" placeholder="name@example.com"
-                            class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black">
-                    </div>
+                <!-- Phone -->
+                <div>
+                    <label class="block text-sm tracking-widest font-medium mb-3">
+                        PHONE NUMBER
+                    </label>
 
-                    <!-- Phone -->
-                    <div>
-                        <label class="block text-sm tracking-widest font-medium mb-3">
-                            PHONE NUMBER
-                        </label>
+                    <input id="phone" type="text" placeholder="000-000-000"
+                        class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black">
+                </div>
 
-                        <input type="text" placeholder="000-000-000"
-                            class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black">
-                    </div>
+                <!-- Message -->
+                <div>
+                    <label class="block text-sm tracking-widest font-medium mb-3">
+                        TYPE YOUR MESSAGE
+                    </label>
 
-                    <!-- Message -->
-                    <div>
-                        <label class="block text-sm tracking-widest font-medium mb-3">
-                            TYPE YOUR MESSAGE
-                        </label>
+                    <textarea id="message" rows="6" placeholder="Your message"
+                        class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black"></textarea>
+                </div>
 
-                        <textarea rows="6" placeholder="Your message"
-                            class="w-full text-sm border border-gray-300 p-4 bg-white outline-none focus:border-black"></textarea>
-                    </div>
+                <!-- Button -->
+                <button type="submit" class="bg-[#7E4404] text-white px-12 py-4 tracking-widest">
+                    SUBMIT
+                </button>
 
-                    <!-- Button -->
-                    <button class="bg-[#7E4404] text-white px-12 py-4 tracking-widest">
-                        SUBMIT
-                    </button>
-
-                </form>
-
-            </div>
+            </form>
 
 
             <!-- RIGHT CONTACT INFO -->
-            <div class="border-l border-gray-300 pl-12">
+            <div class=" md:border-gray-300 md:pl-12">
 
                 <h2 class="text-5xl font-playfair mb-10 text-center">
                     Get in Touch
@@ -203,6 +232,7 @@
 
         </div>
     </section>
+
     <section class="w-full px-10 h-[500px]">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.123456789!2d76.215678!3d10.524123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859c123456789%3A0xabcdef123456789!2sEks%20Place!5e0!3m2!1sen!2sin!4v1678912345678!5m2!1sen!2sin"
@@ -217,14 +247,16 @@
 
         <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
 
-            <h2 class="text-white text-5xl font-playfair leading-snug">
-                Get in Touch With Us <br>
+            <h2 class="text-white text-4xl md:text-5xl font-playfair leading-snug">
+                Get in Touch With Us <br class="hidden md:block">
                 For Pure Coconut Oil Products
             </h2>
 
             <a href="/contact">
-                <button
-                    class="bg-[#7E4404] border-[2px] border-white px-10 py-4 text-white font-semibold tracking-widest">
+                <button class="bg-[#7E4404] border-[2px] border-white 
+        px-6 py-2 md:px-10 md:py-4 
+        text-md md:text-base 
+        text-white font-semibold tracking-widest">
                     CONTACT
                 </button>
             </a>
@@ -308,6 +340,7 @@
 
     </footer>
 
+    <script src="./static/js/script.js"></script>
 
 </body>
 

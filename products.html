@@ -32,16 +32,14 @@
 <body>
 
     <!-- TOP BAR -->
-
-    <div class="bg-[#7E4404] text-center text-sm py-2 text-white font-poppins">
-        Free shipping on all orders of $80 or more.
+    <div class="bg-[#7E4404] text-center text-xs md:text-sm py-2 text-white font-poppins">
+        Pure grains. Fresh milling. Better taste.
     </div>
 
-
     <!-- HEADER -->
-    <header class="relative flex items-center justify-between px-20 py-3 border-b">
+    <header class="relative flex items-center justify-between px-6 md:px-20 py-3 border-b">
 
-        <!-- Menu -->
+        <!-- Left Menu (Desktop) -->
         <nav class="hidden md:flex gap-8 font-medium text-black text-[15px] font-poppins">
             <a href="index.html">HOME</a>
             <a href="products.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">PRODUCTS</a>
@@ -49,53 +47,95 @@
             <a href="contact.html">
                 CONTACT
             </a>
-
         </nav>
 
         <!-- Center Logo -->
-        <div class="absolute left-1/2 transform -translate-x-1/2">
-            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-12 w-auto object-contain">
+        <div class="absolute left-1/2 -translate-x-1/2">
+            <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-10 md:h-12 w-auto object-contain">
         </div>
 
-        <!-- Enquiry Button -->
-        <div class="flex items-center">
-            <button
-                class="bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+        <!-- Right Side -->
+        <div class="flex items-center gap-4 ml-auto">
+
+            <!-- Enquiry Button -->
+            <button onclick="sendEnquiry()"
+                class="hidden md:block bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+                ENQUIRY
+            </button>
+
+            <button id="menuBtn" class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black/40 hidden md:hidden z-40"></div>
+
+    <div id="mobileMenu"
+        class="fixed z-50 top-0 right-0 h-full w-[70%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 md:hidden">
+
+        <!-- Close Button -->
+        <div class="flex justify-end p-6">
+            <button id="closeMenu" class="text-4xl text-[#7E4404] font-medium">&times;</button>
+        </div>
+
+        <div class="flex flex-col px-8 gap-6 font-poppins text-lg">
+
+            <a href="index.html">HOME</a>
+            <a href="products.html" class="underline underline-offset-4 decoration-[#7E4404]">
+                PRODUCTS
+            </a>
+            <a href="about.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+
+            <button onclick="sendEnquiry()" class="bg-[#7E4404] text-white px-6 py-2 rounded-md mt-4">
                 ENQUIRY
             </button>
         </div>
 
-    </header>
+    </div>
+
+
+
+
+
+
     <section class="relative bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
 
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/60"></div>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
 
-        <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
+    <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
 
-            <!-- Breadcrumb -->
-            <div class="text-md text-gray-200 text-left mb-16 font-poppins">
-                Home <span class="mx-2">›</span> Products
-            </div>
-
-            <!-- Small Title -->
-            <p class="uppercase tracking-[3px] text-sm font-medium mb-6 font-poppins">
-                Our Products
-            </p>
-
-            <h1 class="text-6xl mb-8 font-playfair">
-                Explore Our Products
-            </h1>
-
-            <!-- Description -->
-            <p class="text-md text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
-                Discover our range of premium natural coconut oil products and more. Each product is carefully crafted
-                to ensure the highest quality, purity, and wellness for your home.
-            </p>
-
+        <!-- Breadcrumb -->
+        <div class="text-sm md:text-lg text-gray-200 text-left mb-16 font-poppins">
+            Home <span class="mx-2">›</span> Products
         </div>
 
-    </section>
+        <!-- Small Title -->
+        <p class="uppercase md:tracking-[2px] text-sm font-medium mb-6 font-poppins">
+            Our Products
+        </p>
+
+        <!-- Heading -->
+        <h1 class="text-4xl md:text-6xl font-semibold font-playfair mb-8">
+            Explore Our Products
+        </h1>
+
+        <!-- Description -->
+        <p class="text-sm md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
+            Discover our range of premium natural coconut oil products and more. Each product is carefully crafted
+            to ensure the highest quality, purity, and wellness for your home.
+        </p>
+
+    </div>
+
+</section>
 
     <div class="relative overflow-hidden py-20">
 
@@ -116,11 +156,11 @@
                     <!-- Heading -->
                     <div class="text-center mb-14">
 
-                        <p class="uppercase tracking-[3px] text-sm font-semibold text-[#7E4404] font-poppins">
+                        <p class="uppercase tracking-[2px] text-sm font-semibold text-[#7E4404] font-poppins">
                             Shop By Category
                         </p>
 
-                        <h2 class="text-lg font-poppins mt-6 max-w-3xl mx-auto text-gray-600">
+                        <h2 class="text-md md:text-lg font-poppins mt-6 max-w-3xl mx-auto text-gray-600">
                             Explore our complete range of traditional food products crafted
                             with care and sourced from trusted producers to bring authentic
                             taste and nutrition to your home.
@@ -129,7 +169,7 @@
                     </div>
 
 
-                    
+
 
                     <div class=" py-10">
 
@@ -139,23 +179,26 @@
                             <div class="flex gap-12 items-start text-center">
 
                                 <!-- Dairy Products -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="dairy">
                                     <img src="images/dairy.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
                                     <h3 class="text-lg font-serif">Dairy Products</h3>
-                                    
+
                                 </div>
 
                                 <!-- Cold Pressed Oils -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="oils">
                                     <img src="images/oil.jpg" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
                                     <h3 class="text-lg font-serif">Cold Pressed Oils</h3>
                                 </div>
 
                                 <!-- Grain Powders -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="grain_powders">
                                     <img src="images/grain.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -163,7 +206,8 @@
                                 </div>
 
                                 <!-- Special Puttu Powders -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="puttu_powders">
                                     <img src="images/puttu.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -171,7 +215,8 @@
                                 </div>
 
                                 <!-- Tapioca Products -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="tapioca">
                                     <img src="images/tapioca.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -179,7 +224,8 @@
                                 </div>
 
                                 <!-- Pickles -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="pickles">
                                     <img src="images/pickles.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -187,7 +233,8 @@
                                 </div>
 
                                 <!-- Frozen Foods -->
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="frozen">
                                     <img src="images/frozen.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -195,7 +242,9 @@
                                 </div>
 
                                 <!-- Ready to Cook -->
-                                <div class="pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="readycook">
+
                                     <img src="images/readycook.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -209,48 +258,57 @@
 
                                 <!-- Repeat same items -->
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="dairy">
                                     <img src="images/dairy.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Dairy Products</h3>
                                 </div>
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="oil">
                                     <img src="images/oil.jpg" class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Cold Pressed Oils</h3>
                                 </div>
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="grain_powders">
                                     <img src="images/grain.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Grain Powders</h3>
                                 </div>
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="puttu_powders">
                                     <img src="images/puttu.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Special Puttu Powders</h3>
                                 </div>
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="tapioca">
                                     <img src="images/tapioca.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Tapioca Products</h3>
                                 </div>
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="pickles">
                                     <img src="images/pickles.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Pickles</h3>
                                 </div>
 
-                                <div class="border-r border-gray-300 pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="frozen">
                                     <img src="images/frozen.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Frozen Foods</h3>
                                 </div>
 
-                                <div class="pr-6">
+                                <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
+                                    data-category="readycook">
+
                                     <img src="images/readycook.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Ready to Cook</h3>
@@ -262,45 +320,86 @@
                     </div>
                     <div class="flex justify-end mb-10 gap-4 mt-10">
 
-<button id="packedTab"
-class="tab-btn px-6 py-2 border border-[#7E4404] bg-[#7E4404] text-white">
-Packed
-</button>
+                        <button id="packedTab"
+                            class="tab-btn px-6 py-2 border border-[#7E4404] bg-[#7E4404] text-white">
+                            Packed
+                        </button>
 
-<button id="looseTab"
-class="tab-btn px-6 py-2 border border-[#7E4404] text-black">
-Loose
-</button>
+                        <button id="looseTab" class="tab-btn px-6 py-2 border border-[#7E4404] text-black">
+                            Loose
+                        </button>
 
-</div>
+                    </div>
 
                 </div>
 
             </section>
 
+            <div id="productContainer"
+                class="grid md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200 h-[550px] px-6 md:px-10">
+
+                <div class="product-card relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden"
+                    data-name="Dried Tapioca" data-category="Tapioca Products" data-type="Loose" data-price="₹120 / Kg">
+
+                    <!-- Image -->
+                    <div class="relative overflow-hidden mb-6 
+    group-hover:absolute group-hover:inset-0 
+    group-hover:mb-0 transition-all duration-500">
+
+                        <img src="./static/images/tapioca.jpg"
+                            class="w-full h-[320px] object-contain group-hover:h-full transition-all duration-500">
+
+                        <img src="./static/images/hero_sub3.png"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+
+                    <!-- Normal Content -->
+                    <div class="group-hover:hidden relative z-10">
+                        <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
+                        <h3 class="text-xl font-playfair mb-2">Dried Tapioca</h3>
+                        <p class="font-semibold text-lg">₹120 / Kg</p>
+                    </div>
+
+                    <!-- Hover Card -->
+                    <div
+                        class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-20">
+
+                        <div class="bg-white w-[80%] shadow-xl mb-8">
+
+                            <div class="text-center p-6">
+                                <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
+                                <h3 class="text-2xl font-playfair mb-2">Dried Tapioca</h3>
+                                <p class="font-semibold text-lg mb-4">₹120 / Kg</p>
+
+                                <!-- WhatsApp Button -->
+                                <button
+                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 text-sm font-semibold transition"
+                                    onclick="sendWhatsappEnquiry(this.closest('.product-card'))">
+                                    WhatsApp Enquiry
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
 
 
         </div>
     </div>
-    <script>
 
-const tabs = document.querySelectorAll(".tab-btn");
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
+    <script src="./static/js/script.js"></script>
 
-    tabs.forEach(btn => {
-      btn.classList.remove("bg-[#7E4404]", "text-white");
-      btn.classList.add("text-black");
-    });
-
-    tab.classList.add("bg-[#7E4404]", "text-white");
-    tab.classList.remove("text-black");
-
-  });
-});
-
-</script>
 </body>
 
 </html>
