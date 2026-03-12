@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
   const closeMenu = document.getElementById("closeMenu");
 
-  if (menuBtn) {
+  if (menuBtn && mobileMenu && overlay) {
     menuBtn.addEventListener("click", () => {
       menuBtn.classList.toggle("open");
       mobileMenu.classList.toggle("translate-x-full");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.addEventListener("click", () => {
       mobileMenu.classList.add("translate-x-full");
       overlay.classList.add("hidden");
-      menuBtn.classList.remove("open");
+      menuBtn?.classList.remove("open");
     });
   }
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeMenu.addEventListener("click", () => {
       mobileMenu.classList.add("translate-x-full");
       overlay.classList.add("hidden");
-      menuBtn.classList.remove("open");
+      menuBtn?.classList.remove("open");
     });
   }
 
@@ -39,35 +39,32 @@ document.addEventListener("DOMContentLoaded", function () {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
   });
 
-
-
-
-window.sendEnquiry = function () {
-  const phoneNumber = "916282841789";
-  const message = `Hello, I would like to enquire about your flour mill products. Kindly share more details.`;
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-};
-
-
-
+  // ===========================
+  // Generic WhatsApp Enquiry
+  // ===========================
+  window.sendEnquiry = function () {
+    const phoneNumber = "916282841789";
+    const message = `Hello, I would like to enquire about your flour mill products. Kindly share more details.`;
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+  };
 
   // ===========================
-  // Contact Form WhatsApp Enquiry
+  // Contact Form WhatsApp
   // ===========================
   const contactForm = document.getElementById("contactForm");
+
   if (contactForm) {
-    // Reset on load
+
     window.addEventListener("load", () => contactForm.reset());
 
     contactForm.addEventListener("submit", function (e) {
+
       e.preventDefault();
+
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const phone = document.getElementById("phone").value;
@@ -82,8 +79,10 @@ Phone: ${phone}
 Message:
 ${message}`;
 
-      const whatsappNumber = "916282841789";
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+      window.open(
+        `https://wa.me/916282841789?text=${encodeURIComponent(whatsappMessage)}`,
+        "_blank"
+      );
 
       contactForm.reset();
     });
@@ -93,39 +92,52 @@ ${message}`;
   // Hero Image Slider
   // ===========================
   const heroImage = document.getElementById("heroImage");
+
   if (heroImage) {
+
     const images = [
       "./static/images/hero_sub1.png",
       "./static/images/hero_sub2.png",
       "./static/images/hero_sub3.png"
     ];
+
     let index = 0;
+
     setInterval(() => {
+
       heroImage.classList.remove("opacity-100");
       heroImage.classList.add("opacity-0");
 
       setTimeout(() => {
+
         index = (index + 1) % images.length;
         heroImage.src = images[index];
+
         heroImage.classList.remove("opacity-0");
         heroImage.classList.add("opacity-100");
+
       }, 400);
+
     }, 3000);
   }
 
   // ===========================
   // Tabs
   // ===========================
-  const tabs = document.querySelectorAll(".tab-btn");
-  tabs.forEach(tab => {
+  document.querySelectorAll(".tab-btn").forEach(tab => {
+
     tab.addEventListener("click", () => {
-      tabs.forEach(btn => {
+
+      document.querySelectorAll(".tab-btn").forEach(btn => {
         btn.classList.remove("bg-[#7E4404]", "text-white");
         btn.classList.add("text-black");
       });
+
       tab.classList.add("bg-[#7E4404]", "text-white");
       tab.classList.remove("text-black");
+
     });
+
   });
 
   // ===========================
@@ -133,62 +145,85 @@ ${message}`;
   // ===========================
   let activeCategory = "all";
   let activeType = "all";
+
   const products = document.querySelectorAll(".product-card");
 
   function filterProducts() {
+
     products.forEach(product => {
-      const category = product.dataset.category.toLowerCase();
-      const type = product.dataset.type.toLowerCase();
+
+      const category = product.dataset.category?.toLowerCase();
+      const type = product.dataset.type?.toLowerCase();
+
       const categoryMatch = activeCategory === "all" || category === activeCategory;
       const typeMatch = activeType === "all" || type === activeType;
+
       product.style.display = (categoryMatch && typeMatch) ? "block" : "none";
+
     });
   }
 
   document.querySelectorAll(".category-item").forEach(category => {
+
     category.addEventListener("click", function () {
+
       activeCategory = this.dataset.category.toLowerCase();
       filterProducts();
+
     });
+
   });
 
   const packedTab = document.getElementById("packedTab");
   const looseTab = document.getElementById("looseTab");
 
-  if (packedTab) packedTab.addEventListener("click", () => { activeType = "packed"; filterProducts(); });
-  if (looseTab) looseTab.addEventListener("click", () => { activeType = "loose"; filterProducts(); });
+  packedTab?.addEventListener("click", () => {
+    activeType = "packed";
+    filterProducts();
+  });
+
+  looseTab?.addEventListener("click", () => {
+    activeType = "loose";
+    filterProducts();
+  });
 
   filterProducts();
 
   // ===========================
-  // Product Quantity Selection
+  // Product Weight Selection
   // ===========================
-  document.querySelectorAll('.weight-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const card = btn.closest('.product-card');
+  document.querySelectorAll('.product-card').forEach(card => {
 
-      // Remove highlight from other buttons in this card
-      card.querySelectorAll('.weight-btn').forEach(b => b.classList.remove('bg-green-500', 'text-white'));
+    const buttons = card.querySelectorAll('.weight-btn');
 
-      // Highlight the clicked button
-      btn.classList.add('bg-green-500', 'text-white');
+    buttons.forEach(btn => {
 
-      // Save the selected weight in the card dataset
-      card.dataset.selectedWeight = btn.dataset.weight;
+      btn.addEventListener('click', function (e) {
+
+        e.stopPropagation();
+
+        buttons.forEach(b => b.classList.remove('bg-green-500', 'text-white'));
+
+        btn.classList.add('bg-green-500', 'text-white');
+
+        card.dataset.selectedWeight = btn.dataset.weight || btn.innerText;
+
+      });
+
     });
+
   });
 
   // ===========================
-  // Product Card WhatsApp Enquiry
+  // WhatsApp Product Enquiry
   // ===========================
   window.sendWhatsappEnquiry = function (card) {
+
     const name = card.dataset.name;
     const category = card.dataset.category;
     const type = card.dataset.type;
     const price = card.dataset.price;
-
-    // Get selected quantity if any
-    const quantity = card.dataset.selectedWeight || 'N/A';
+    const quantity = card.dataset.selectedWeight || "Not selected";
 
     const message = `Hello, I would like to enquire about this product.
 
@@ -200,27 +235,66 @@ Quantity: ${quantity}
 
 Kindly share more details.`;
 
-    const whatsappNumber = "916282841789";
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(
+      `https://wa.me/916282841789?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
   };
-document.addEventListener("DOMContentLoaded", () => {
-    const productCards = document.querySelectorAll(".product-card");
 
-    productCards.forEach(card => {
-        card.addEventListener("click", (e) => {
-            if (window.innerWidth < 768) { // Tailwind 'sm' breakpoint
-                card.classList.toggle("hover-active");
-            }
-        });
-    });
+  // ===========================
+  // Mobile Product Card Toggle
+  // ===========================
+  if (window.innerWidth < 768) {
 
-    // Optional: remove hover-active if clicked outside
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest(".product-card")) {
-            document.querySelectorAll(".product-card.hover-active").forEach(card => {
-                card.classList.remove("hover-active");
-            });
+    document.querySelectorAll('#productContainerMobile .product-card').forEach(card => {
+
+      card.addEventListener('click', () => {
+
+        const overlay = card.querySelector('.overlay-content');
+
+        if (overlay) {
+          overlay.classList.toggle('opacity-100');
         }
+
+      });
+
     });
+
+  }
+  // Mobile card toggle
+document.querySelectorAll('#productContainerMobile .product-card').forEach(card => {
+  card.addEventListener('click', (e) => {
+
+    // prevent toggle when clicking button or weight
+    if (e.target.closest('button')) return;
+
+    const overlay = card.querySelector('.absolute.inset-0');
+
+    // close other cards
+    document.querySelectorAll('#productContainerMobile .product-card .absolute.inset-0')
+      .forEach(o => {
+        if (o !== overlay) o.classList.remove('opacity-100');
+      });
+
+    overlay.classList.toggle('opacity-100');
+  });
 });
+
+
+// Close card when clicking outside
+document.addEventListener('click', function (e) {
+
+  const card = e.target.closest('.product-card');
+
+  if (!card) {
+    document.querySelectorAll('#productContainerMobile .product-card .absolute.inset-0')
+      .forEach(overlay => {
+        overlay.classList.remove('opacity-100');
+      });
+  }
+
+});
+
+
+
 });

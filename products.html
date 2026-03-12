@@ -30,55 +30,61 @@
 </head>
 
 <body>
+    <!-- FIXED NAVBAR WRAPPER -->
+    <div class="fixed top-0 left-0 w-full z-[100] bg-white">
 
-    <!-- TOP BAR -->
-    <div class="bg-[#7E4404] text-center text-xs md:text-sm py-2 text-white font-poppins">
-        Pure grains. Fresh milling. Better taste.
+        <!-- TOP BAR -->
+        <div class="bg-[#7E4404] text-center text-xs md:text-sm py-2 text-white font-poppins">
+            Pure grains. Fresh milling. Better taste.
+        </div>
+
+        <!-- HEADER -->
+        <header class="relative flex items-center justify-between px-6 md:px-20 py-3 border-b">
+
+            <!-- Left Menu (Desktop) -->
+            <nav class="hidden xl:flex gap-8 font-medium text-black text-[15px] font-poppins">
+                <a href="index.html">HOME</a>
+                <a href="products.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">PRODUCTS</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+
+            <!-- Center Logo -->
+            <div class="absolute left-1/2 -translate-x-1/2">
+                <a href="index.html">
+                    <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-10 md:h-12 w-auto object-contain">
+                </a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="flex items-center gap-4 ml-auto">
+
+                <!-- Enquiry Button -->
+                <button onclick="sendEnquiry()"
+                    class="hidden md:block bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
+                    ENQUIRY
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="xl:hidden flex flex-col justify-center gap-1.5 w-8 h-8">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+            </div>
+
+        </header>
+
     </div>
 
-    <!-- HEADER -->
-    <header class="relative flex items-center justify-between px-6 md:px-20 py-3 border-b">
-
-        <!-- Left Menu (Desktop) -->
-        <nav class="hidden md:flex gap-8 font-medium text-black text-[15px] font-poppins">
-            <a href="index.html">HOME</a>
-            <a href="products.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">PRODUCTS</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">
-                CONTACT
-            </a>
-        </nav>
-
-        <!-- Center Logo -->
-        <div class="absolute left-1/2 -translate-x-1/2">
-            <a href="index.html">
-                <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-10 md:h-12 w-auto object-contain">
-            </a>
-        </div>
-        <!-- Right Side -->
-        <div class="flex items-center gap-4 ml-auto">
-
-            <!-- Enquiry Button -->
-            <button onclick="sendEnquiry()"
-                class="hidden md:block bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
-                ENQUIRY
-            </button>
-
-            <button id="menuBtn" class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-
-        </div>
-
-    </header>
 
     <!-- Overlay -->
-    <div id="overlay" class="fixed inset-0 bg-black/40 hidden md:hidden z-40"></div>
+    <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-[90]"></div>
 
+    <!-- Mobile Menu -->
     <div id="mobileMenu"
-        class="fixed z-50 top-0 right-0 h-full w-[70%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 md:hidden">
+        class="fixed z-[110] top-0 right-0 h-full w-[70%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 xl:hidden">
 
         <!-- Close Button -->
         <div class="flex justify-end p-6">
@@ -87,16 +93,15 @@
 
         <div class="flex flex-col px-8 gap-6 font-poppins text-lg">
 
-            <a href="index.html">HOME</a>
-            <a href="products.html" class="underline underline-offset-4 decoration-[#7E4404]">
-                PRODUCTS
-            </a>
+            <a href="index.html" >HOME</a>
+            <a href="products.html"class="underline underline-offset-4 decoration-[#7E4404]">PRODUCTS</a>
             <a href="about.html">ABOUT</a>
             <a href="contact.html">CONTACT</a>
 
             <button onclick="sendEnquiry()" class="bg-[#7E4404] text-white px-6 py-2 rounded-md mt-4">
                 ENQUIRY
             </button>
+
         </div>
 
     </div>
@@ -106,7 +111,7 @@
 
 
 
-    <section class="relative bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
+    <section class="mt-20 relative bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
 
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black/60"></div>
@@ -218,7 +223,7 @@
 
                                 <!-- Tapioca Products -->
                                 <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
-                                    data-category="tapioca">
+                                    data-category="tappioca">
                                     <img src="./static/images/tapioca2.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
 
@@ -273,7 +278,7 @@
                                 </div>
 
                                 <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
-                                    data-category="tapioca">
+                                    data-category="tappioca">
                                     <img src="./static/images/tapioca2.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Tapioca Products</h3>
@@ -310,128 +315,393 @@
 
             </section>
 
-            <div id="productContainer"
-                class="grid md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200 h-[550px] px-6 md:px-10">
+            <section class="py-10 hidden md:block">
 
-                <div class="product-card relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden"
-                    data-name="Dried Tapioca" data-category="Tapioca Products" data-type="Loose" data-price="₹120 / Kg">
+                <div class="w-full mx-auto px-6 md:px-20">
 
-                    <!-- Image -->
-                    <div class="relative overflow-hidden mb-6 
-    group-hover:absolute group-hover:inset-0 
-    group-hover:mb-0 transition-all duration-500">
-
-                        <img src="./static/images/tapioca.jpg"
-                            class="w-full h-[320px] object-contain group-hover:h-full transition-all duration-500">
-
-                        <img src="./static/images/bg0.png"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    </div>
-
-                    <!-- Normal Content -->
-                    <div class="group-hover:hidden relative z-10">
-                        <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
-                        <h3 class="text-xl font-playfair mb-2">Dried Tapioca</h3>
-                        <p class="font-semibold text-lg">₹120 / Kg</p>
-                    </div>
-
-                    <!-- Hover Card -->
+                    <!-- Top Header -->
                     <div
-                        class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-20">
+                        class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 md:mb-12 gap-6 md:gap-0 px-4 sm:px-6 lg:px-0">
 
-                        <div class="bg-white w-[80%] shadow-xl mb-8">
+                        <!-- Left: Heading -->
+                        <div class="text-left">
+                            <p
+                                class="uppercase tracking-widest text-xs sm:text-sm text-[#7E4404] font-semibold mb-1 sm:mb-2">
+                                OUR PRODUCTS
+                            </p>
 
-                            <div class="text-center p-6">
-                                <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
-                                <h3 class="text-2xl font-playfair mb-2">Dried Tapioca</h3>
-                                <p class="font-semibold text-lg mb-4">₹120 / Kg</p>
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-playfair font-semibold leading-snug">
+                                Freshly Milled Products
+                            </h2>
+                        </div>
 
-                                <!-- WhatsApp Button -->
-                                <button
-                                    class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 text-sm font-semibold transition"
-                                    onclick="sendWhatsappEnquiry(this.closest('.product-card'))">
-                                    WhatsApp Enquiry
-                                </button>
+                        <!-- Right: Button -->
+                        <a href="products.html"
+                            class="self-end md:self-auto underline px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold hover:bg-[#7E4404] hover:text-white transition rounded">
+                            VIEW ALL PRODUCTS
+                        </a>
 
+                    </div>
+
+
+
+                    <div id="productContainerDesktop"
+                        class="grid md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200 h-[550px]">
+                        <!-- Product Card Example -->
+                        <div class="product-card relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden"
+                            data-name="Dried Tapioca" data-category="Tapioca Products" data-type="Loose"
+                            data-price="₹120 / Kg">
+
+                            <!-- Image -->
+                            <div
+                                class="relative overflow-hidden mb-6 group-hover:absolute group-hover:inset-0 group-hover:mb-0 transition-all duration-500">
+                                <img src="./static/images/tapioca.jpg"
+                                    class="w-full h-[320px] object-contain group-hover:h-full transition-all duration-500">
+                                <img src="./static/images/hero_sub3.png"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
                             </div>
 
+                            <!-- Normal Content -->
+                            <div class="group-hover:hidden relative z-10">
+                                <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
+                                <h3 class="text-xl font-playfair mb-2">Dried Tapioca</h3>
+                                <p class="font-semibold text-lg">₹120 / Kg</p>
+                            </div>
+
+                            <!-- Hover Card -->
+                            <div
+                                class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-20">
+                                <div class="bg-white w-[80%] shadow-xl mb-8">
+                                    <div class="text-center p-6">
+                                        <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
+                                        <h3 class="text-2xl font-playfair mb-2">Dried Tapioca</h3>
+                                        <p class="font-semibold text-lg mb-4">₹120 / Kg</p>
+
+                                        <!-- WhatsApp Button -->
+                                        <button
+                                            class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 text-sm font-semibold transition"
+                                            onclick="sendWhatsappEnquiry(this.closest('.product-card'))">
+                                            WhatsApp Enquiry
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Product Card 2 -->
+                        <div
+                            class="product-card relative bg-white text-center p-4 sm:p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden cursor-pointer">
+                            <!-- Image -->
+                            <div
+                                class="relative overflow-hidden mb-4 sm:mb-6 group-hover:absolute group-hover:inset-0 transition-all duration-500">
+                                <img src="./static/images/pickle.jpg"
+                                    class="w-full h-64 sm:h-[320px] object-cover group-hover:h-full transition-all duration-500">
+                                <img src="./static/images/bg0.png"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
+                            </div>
+                            <!-- Normal Content -->
+                            <div class="group-hover:hidden relative z-10">
+                                <p class="text-gray-400 text-sm mb-1">Pickles</p>
+                                <h3 class="text-lg sm:text-xl font-playfair mb-2">Mango Pickle</h3>
+                                <p class="font-semibold text-base sm:text-lg">₹250 / Jar</p>
+                            </div>
+                            <!-- Hover Card -->
+                            <div
+                                class="absolute inset-0 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition duration-500 z-20">
+                                <div class="bg-white w-[90%] sm:w-[80%] shadow-xl mb-4 sm:mb-8 p-4 sm:p-6 mx-auto">
+                                    <p class="text-gray-400 text-sm mb-1">Pickles</p>
+                                    <h3 class="text-xl sm:text-2xl font-playfair mb-2">Mango Pickle</h3>
+                                    <p class="font-semibold text-base sm:text-lg mb-4">₹250 / Jar</p>
+                                    <div class="flex justify-center gap-2 sm:gap-3 mb-4">
+                                        <button
+                                            class="bg-green-500 hover:bg-green-600 text-white px-3 sm:px-4 py-2 text-sm sm:text-base font-semibold transition"
+                                            onclick="sendWhatsappEnquiry(this.closest('.product-card'))">
+                                            WhatsApp
+                                        </button>
+                                    </div>
+                                    <div class="grid grid-cols-3 border-t">
+                                        <button
+                                            class="weight-btn border-l py-2 sm:py-3 flex items-center justify-center hover:bg-gray-100"
+                                            data-weight="250 g">
+                                            250 g
+                                        </button>
+
+                                        <button
+                                            class="weight-btn border-l py-2 sm:py-3 flex items-center justify-center hover:bg-gray-100"
+                                            data-weight="500 g">
+                                            500 g
+                                        </button>
+
+                                        <button
+                                            class="weight-btn border-l py-2 sm:py-3 flex items-center justify-center hover:bg-gray-100"
+                                            data-weight="1 Kg">
+                                            1 Kg
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
 
-                </div>
+            </section>
 
 
 
-                <div class="product-card relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden cursor-pointer"
-                    data-name="Mango Pickle" data-category="Pickles" data-type="Packed" data-price="₹250 / Jar"
-                    data-image="./static/images/pickle.jpg" data-hover-image="./static/images/bg0.png">
 
-                    <!-- Image -->
-                    <div class="relative overflow-hidden mb-6 
-        group-hover:absolute group-hover:inset-0 
-        group-hover:mb-0 transition-all duration-500">
+            <section class="py-10 block md:hidden">
 
-                        <img src="./static/images/pickle.jpg"
-                            class="w-full h-[320px] object-cover group-hover:h-full transition-all duration-500">
+                <div class="w-full mx-auto px-6 md:px-20">
 
-                        <img src="./static/images/bg0.png"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
-                    </div>
-
-                    <!-- Normal Content -->
-                    <div class="group-hover:hidden relative z-10">
-                        <p class="text-gray-400 text-sm mb-1">Pickles</p>
-                        <h3 class="text-xl font-playfair mb-2">Mango Pickle</h3>
-                        <p class="font-semibold text-lg">₹250 / Jar</p>
-                    </div>
-
-                    <!-- Hover Card -->
+                    <!-- Top Header -->
                     <div
-                        class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-20">
-                        <div class="bg-white w-[80%] shadow-xl mb-8">
-                            <div class="text-center p-6">
-                                <p class="text-gray-400 text-sm mb-1">Pickles</p>
-                                <h3 class="text-2xl font-playfair mb-2">Mango Pickle</h3>
-                                <p class="font-semibold text-lg mb-4">₹250 / Jar</p>
+                        class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 md:mb-12 gap-6 md:gap-0 px-4 sm:px-6 lg:px-0">
 
-                                <div class="flex justify-center gap-3 mb-4">
+                        <!-- Left: Heading -->
+                        <div class="text-left">
+                            <p
+                                class="uppercase tracking-widest text-xs sm:text-sm text-[#7E4404] font-semibold mb-1 sm:mb-2">
+                                OUR PRODUCTS
+                            </p>
+
+                            <h2 class="text-2xl sm:text-3xl md:text-4xl font-playfair font-semibold leading-snug">
+                                Freshly Milled Products
+                            </h2>
+                        </div>
+
+                        <!-- Right: Button -->
+                        <a href="products.html"
+                            class="self-end md:self-auto underline px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold hover:bg-[#7E4404] hover:text-white transition rounded">
+                            VIEW ALL PRODUCTS
+                        </a>
+
+                    </div>
 
 
-                                    <!-- WhatsApp -->
+
+                    <div id="productContainerMobile" class="grid grid-cols-1 gap-6">
+
+                        <!-- Product Card -->
+                        <div class="product-card relative bg-white overflow-hidden flex flex-col cursor-pointer"
+                            data-name="Dried Tapioca" data-category="Tapioca Products" data-type="Loose"
+                            data-price="₹120 / Kg" data-image="./static/images/tapioca2.jpg"
+                            data-hover-image="./static/images/tapioca_hover2.jpg">
+
+                            <!-- Default Image -->
+                            <div class="relative w-full  h-[350px] sm:h-80 overflow-hidden">
+                                <img src="./static/images/tapioca2.jpg"
+                                    class="w-full h-full object-cover transition-transform duration-500">
+                            </div>
+
+                            <!-- Card Content (Always visible) -->
+                            <div class="p-4">
+                                <p class="text-gray-500 text-sm mb-1">Tapioca Products</p>
+                                <h3 class="text-xl font-playfair mb-2">Dried Tapioca</h3>
+                                <p class="font-semibold text-lg mb-3">₹120 / Kg</p>
+                            </div>
+
+                            <!-- Overlay Content (Hidden initially) -->
+                            <div
+                                class="absolute inset-0 flex flex-col justify-end opacity-0 transition-opacity duration-500 z-20">
+                                <img src="./static/images/hero_sub3.png"
+                                    class="absolute inset-0 w-full h-full object-cover z-10">
+                                <div class="bg-white bg-opacity-95 p-4 z-20 flex flex-col gap-3 w-[80%] mx-auto mb-2">
+                                    <p class="text-gray-500 text-sm mb-1">Tapioca Products</p>
+                                    <h3 class="text-xl font-playfair mb-1">Dried Tapioca</h3>
+                                    <p class="font-semibold text-lg mb-2">₹120 / Kg</p>
+
+
+
                                     <button
-                                        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 text-sm font-semibold transition"
-                                        onclick="sendWhatsappEnquiry(this.closest('.product-card'))">
-                                        WhatsApp
+                                        class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded mt-2 transition"
+                                        onclick="event.stopPropagation(); sendWhatsappEnquiry(this.closest('.product-card'))">
+                                        WhatsApp Enquiry
                                     </button>
                                 </div>
                             </div>
 
-                            <!-- Weight / Jar Options -->
-                            <div class="grid grid-cols-3 border-t">
-                                <button
-                                    class="weight-btn border-l py-3 flex items-center justify-center hover:bg-gray-100"
-                                    data-weight="250">250 g</button>
-                                <button
-                                    class="weight-btn border-l py-3 flex items-center justify-center hover:bg-gray-100"
-                                    data-weight="500">500 g</button>
-                                <button
-                                    class="weight-btn border-l py-3 flex items-center justify-center hover:bg-gray-100"
-                                    data-weight="1">1 KG</button>
+                        </div>
+                        <!-- Product Card - Pickle -->
+                        <div class="product-card relative bg-white overflow-hidden flex flex-col cursor-pointer"
+                            data-name="Mango Pickle" data-category="Pickles" data-type="Packed" data-price="₹250 / Jar"
+                            data-image="./static/images/pickle.jpg" data-hover-image="./static/images/pickle_hover.jpg">
+
+                            <!-- Default Image -->
+                            <div class="relative w-full h-[350px] sm:h-80 overflow-hidden">
+                                <img src="./static/images/pickle.jpg"
+                                    class="w-full h-full object-cover transition-transform duration-500">
                             </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <p class="text-gray-500 text-sm mb-1">Pickles</p>
+                                <h3 class="text-xl font-playfair mb-2">Mango Pickle</h3>
+                                <p class="font-semibold text-lg mb-3">₹250 / Jar</p>
+                            </div>
+
+                            <!-- Overlay Content -->
+                            <div
+                                class="absolute inset-0 flex flex-col justify-end opacity-0 transition-opacity duration-500 z-20">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/bg0.png"
+                                    class="absolute inset-0 w-full h-full object-cover z-10">
+
+                                <!-- Bottom Box -->
+                                <div class="bg-white bg-opacity-95 p-4 z-20 flex flex-col gap-3 w-[85%] mx-auto mb-3">
+
+                                    <p class="text-gray-500 text-sm mb-1">Pickles</p>
+                                    <h3 class="text-xl font-playfair mb-1">Mango Pickle</h3>
+                                    <p class="font-semibold text-lg mb-2">₹250 / Jar</p>
+
+                                    <!-- Weight Selection -->
+                                    <div>
+                                        <p class="text-gray-600 text-sm mb-1">Select Weight</p>
+                                        <div class="flex gap-2">
+                                            <button
+                                                class="weight-btn border border-gray-300 px-3 py-1 text-sm hover:bg-gray-100"
+                                                data-weight="250 g">250 g</button>
+
+                                            <button
+                                                class="weight-btn border border-gray-300 px-3 py-1 text-sm hover:bg-gray-100"
+                                                data-weight="500 g">500 g</button>
+
+                                            <button
+                                                class="weight-btn border border-gray-300 px-3 py-1 text-sm hover:bg-gray-100"
+                                                data-weight="1 Kg">1 Kg</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- WhatsApp Button -->
+                                    <button
+                                        class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded mt-2 transition"
+                                        onclick="event.stopPropagation(); sendWhatsappEnquiry(this.closest('.product-card'))">
+                                        WhatsApp Enquiry
+                                    </button>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-
-
-
-            </div>
-
-
+            </section>
 
         </div>
     </div>
+    <section class="mt-10 relative bg-cover bg-center py-20" style="background-image:url('./static/images/bg5.jpg')">
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-[#3f5400]/70"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+            <h2 class="text-white text-4xl md:text-5xl font-playfair leading-snug">
+                Get in Touch With Us <br class="hidden md:block">
+                For Pure Coconut Oil Products
+            </h2>
+
+            <a href="contact.html">
+                <button class="bg-[#7E4404] border-[2px] border-white 
+        px-6 py-2 md:px-10 md:py-4 
+        text-md md:text-base 
+        text-white font-semibold tracking-widest">
+                    CONTACT
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer class="bg-[#1f1f1f] text-gray-300 pt-16">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 pb-16">
+
+            <!-- Logo -->
+            <div>
+                <a href="index.html" class="inline-block">
+    <img src="./static/images/eks_logo.png" 
+         alt="Eks Place Logo" 
+         class="w-36 mb-4 object-contain">
+</a>
+
+                <p class="text-sm mb-6 font-poppins">
+                    Eks Place provides high quality natural coconut oil products made with traditional methods.
+                </p>
+
+                <p class="uppercase text-md mb-3 tracking-widest font-poppins">Follow Us</p>
+
+                <div class="flex gap-3 ">
+                    <div class="bg-gray-700 p-3">F</div>
+                    <div class="bg-gray-700 p-3">I</div>
+                    <div class="bg-gray-700 p-3">X</div>
+                </div>
+            </div>
+
+
+            <!-- Navigation -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Navigation</h3>
+                <ul class="space-y-6 text-md font-poppins">
+                    <li>
+                        <a href="index.html" class="hover:text-green-600 transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="hover:text-green-600 transition">About</a>
+                    </li>
+                    <li>
+                        <a href="products.html" class="hover:text-green-600 transition">Products</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Specifications -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Specifications</h3>
+                <ul class="space-y-6 text-md font-poppins">
+                    <li>100% Pure Products</li>
+                    <li>Traditional Preparation</li>
+                    <li>Fresh Ingredients</li>
+                    <li>Nilambur Delivery</li>
+                    <li>Export Packing Available</li>
+                </ul>
+            </div>
+
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Contact</h3>
+
+                <p class="text-md font-poppins mb-6">
+                    Kerala, India
+                </p>
+
+                <p class="space-y-6 text-md font-poppins mb-6">
+                    +91 98765 43210
+                </p>
+
+                <p class="space-y-6 text-md font-poppins">
+                    info@eksplace.com
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div class="border-t border-gray-700 py-6 text-center text-sm">
+            © 2025 All Rights Reserved. Powered by Cybexel
+        </div>
+
+    </footer>
 
 
     <script src="./static/js/script.js"></script>
