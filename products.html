@@ -252,14 +252,14 @@
                                 <!-- Repeat same items -->
 
                                 <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
-                                    data-category="dairy">
+                                    data-category="dairy_products">
                                     <img src="./static/images/dairy.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Dairy Products</h3>
                                 </div>
 
                                 <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
-                                    data-category="oil">
+                                    data-category="oil_products">
                                     <img src="./static/images/oil.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Cold Pressed Oils</h3>
@@ -280,7 +280,7 @@
                                 </div>
 
                                 <div class="category-item border-r border-gray-300 pr-6 cursor-pointer"
-                                    data-category="tappioca">
+                                    data-category="tappioca_products">
                                     <img src="./static/images/tapioca2.jpg"
                                         class="w-28 h-28 mx-auto rounded-full object-cover mb-4">
                                     <h3 class="text-lg font-serif">Tapioca Products</h3>
@@ -303,11 +303,11 @@
                     <div class="flex justify-end mb-10 gap-4 mt-10">
 
                         <button id="packedTab"
-                            class="tab-btn px-6 py-2 border border-[#7E4404] bg-[#7E4404] text-white">
+                            class="tab-btn px-6 py-2 border border-[#7E4404] bg-[#7E4404] text-white rounded-md">
                             Packed
                         </button>
 
-                        <button id="looseTab" class="tab-btn px-6 py-2 border border-[#7E4404] text-black">
+                        <button id="looseTab" class="tab-btn px-6 py-2 border border-[#7E4404] text-black rounded-md">
                             Loose
                         </button>
 
@@ -347,20 +347,26 @@
 
 
 
-                    <div id="productContainerDesktop"
+                     <div id="productContainerDesktop"
                         class="grid md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200 h-[550px]">
                         <!-- Product Card Example -->
                         <div class="product-card relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden"
-                            data-name="Dried Tapioca" data-category="Tapioca Products" data-type="Loose"
+                            data-name="Dried Tapioca" data-category="tappioca_products" data-type="Loose"
                             data-price="₹120 / Kg">
 
                             <!-- Image -->
                             <div
-                                class="relative overflow-hidden mb-6 group-hover:absolute group-hover:inset-0 group-hover:mb-0 transition-all duration-500">
+                                class="relative overflow-hidden mb-6 group-hover:absolute group-hover:inset-0 group-hover:mb-0">
+
+                                <!-- Default Image -->
                                 <img src="./static/images/tapioca.jpg"
-                                    class="w-full h-[320px] object-contain group-hover:h-full transition-all duration-500">
-                                <img src="./static/images/hero_sub3.png"
-                                    class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                    class="w-full h-[320px] object-contain transition-all duration-700 ease-in-out group-hover:scale-110">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/bg9.png" class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105
+        transition-all duration-700 ease-in-out
+        group-hover:opacity-100 group-hover:scale-100">
+
                             </div>
 
                             <!-- Normal Content -->
@@ -393,14 +399,22 @@
 
                         <!-- Product Card 2 -->
                         <div
-                            class="product-card relative bg-white text-center p-4 sm:p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden cursor-pointer">
+                            class="product-card relative bg-white text-center p-4 sm:p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden cursor-pointer"
+                            data-name="Pickle" data-category="pickles" data-type="Packed"
+                            data-price="₹80 / Kg">
                             <!-- Image -->
                             <div
-                                class="relative overflow-hidden mb-4 sm:mb-6 group-hover:absolute group-hover:inset-0 transition-all duration-500">
-                                <img src="./static/images/pickle.jpg"
-                                    class="w-full h-64 sm:h-[320px] object-cover group-hover:h-full transition-all duration-500">
-                                <img src="./static/images/bg0.png"
-                                    class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-500">
+                                class="relative overflow-hidden mb-4 sm:mb-6 group-hover:absolute group-hover:inset-0 transition-all duration-700 ease-in-out">
+
+                                <!-- Default Image -->
+                                <img src="./static/images/pickle.jpg" class="w-full h-64 sm:h-[320px] object-cover transform transition-all duration-700 ease-in-out
+        group-hover:h-full group-hover:scale-110">
+
+                                <!-- Hover Image -->
+                                <img src="./static/images/bg9.png" class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105
+        transform transition-all duration-700 ease-in-out
+        group-hover:opacity-100 group-hover:scale-100">
+
                             </div>
                             <!-- Normal Content -->
                             <div class="group-hover:hidden relative z-10">
@@ -506,7 +520,7 @@
                             <!-- Overlay Content (Hidden initially) -->
                             <div
                                 class="absolute inset-0 flex flex-col justify-end opacity-0 transition-opacity duration-500 z-20">
-                                <img src="./static/images/hero_sub3.png"
+                                <img src="./static/images/bg9.png"
                                     class="absolute inset-0 w-full h-full object-cover z-10">
                                 <div class="bg-white bg-opacity-95 p-4 z-20 flex flex-col gap-3 w-[80%] mx-auto mb-2">
                                     <p class="text-gray-500 text-sm mb-1">Tapioca Products</p>
@@ -547,7 +561,7 @@
                                 class="absolute inset-0 flex flex-col justify-end opacity-0 transition-opacity duration-500 z-20">
 
                                 <!-- Hover Image -->
-                                <img src="./static/images/bg0.png"
+                                <img src="./static/images/bg9.png"
                                     class="absolute inset-0 w-full h-full object-cover z-10">
 
                                 <!-- Bottom Box -->
@@ -601,15 +615,15 @@
         <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
 
             <h2 class="text-white text-4xl md:text-5xl font-playfair leading-snug">
-                Get in Touch With Us <br class="hidden md:block">
-                For Pure Coconut Oil Products
+                <span class="block">For Fresh & Natural</span>
+                <span class="block mt-4">Food Products</span>
             </h2>
 
             <a href="contact.html">
                 <button class="bg-[#7E4404] border-[2px] border-white 
         px-6 py-2 md:px-10 md:py-4 
         text-md md:text-base 
-        text-white font-semibold tracking-widest">
+        text-white font-semibold tracking-widest rounded-md">
                     CONTACT
                 </button>
             </a>
@@ -619,7 +633,7 @@
     </section>
 
 
-    <footer class="bg-[#1f1f1f] text-gray-300 pt-16">
+ <footer class="bg-[#1f1f1f] text-gray-300 pt-16">
 
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 pb-16">
 
@@ -670,7 +684,6 @@
                     <li>100% Pure Products</li>
                     <li>Traditional Preparation</li>
                     <li>Fresh Ingredients</li>
-                    <li>Nilambur Delivery</li>
                     <li>Export Packing Available</li>
                 </ul>
             </div>
@@ -681,17 +694,26 @@
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Contact</h3>
 
                 <p class="text-md font-poppins mb-6">
-                    Kerala, India
+                    Nilambur, Malappuram
                 </p>
 
-                <p class="space-y-6 text-md font-poppins mb-6">
-                    +91 98765 43210
+                <div class="text-md font-poppins mb-6 space-y-2">
+                    <p>+91 8891738750</p>
+                    <p>+91 8606313325</p>
+                </div>
+
+                <p class="text-md font-poppins">
+                    mrnoushad555@gmail.com
                 </p>
 
-                <p class="space-y-6 text-md font-poppins">
-                    info@eksplace.com
-                </p>
+                <!-- Map -->
+                <div class="mt-6 overflow-hidden rounded-md">
+                    <iframe src="https://www.google.com/maps?q=Nilambur,Malappuram&output=embed"
+                        class="w-full h-40 border-0">
+                    </iframe>
+                </div>
             </div>
+        </div>
 
         </div>
 
