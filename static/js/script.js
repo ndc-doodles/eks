@@ -93,34 +93,42 @@ ${message}`;
   // ===========================
   const heroImage = document.getElementById("heroImage");
 
-  if (heroImage) {
+if (heroImage) {
+  const images = [
+    "./static/images/hero_sub1.png",
+    "./static/images/hero_sub2.png",
+    "./static/images/hero_sub3.png"
+  ];
 
-    const images = [
-      "./static/images/hero_sub1.png",
-      "./static/images/hero_sub2.png",
-      "./static/images/hero_sub3.png"
-    ];
+  // Preload images
+  const preloaded = images.map(src => {
+    const img = new Image();
+    img.src = src;
+    return img;
+  });
 
-    let index = 0;
+  let index = 0;
 
-    setInterval(() => {
+  setInterval(() => {
+    // Fade out
+    heroImage.classList.remove("opacity-100");
+    heroImage.classList.add("opacity-0");
 
-      heroImage.classList.remove("opacity-100");
-      heroImage.classList.add("opacity-0");
+    setTimeout(() => {
+      // Move to next image
+      index = (index + 1) % images.length;
 
-      setTimeout(() => {
-
-        index = (index + 1) % images.length;
+      // Only set src if preloaded successfully
+      if (preloaded[index].complete) {
         heroImage.src = images[index];
+      }
 
-        heroImage.classList.remove("opacity-0");
-        heroImage.classList.add("opacity-100");
-
-      }, 400);
-
-    }, 3000);
-  }
-
+      // Fade in
+      heroImage.classList.remove("opacity-0");
+      heroImage.classList.add("opacity-100");
+    }, 400);
+  }, 3000);
+}
   // ===========================
   // Tabs
   // ===========================
