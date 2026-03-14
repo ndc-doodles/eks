@@ -7,10 +7,8 @@
 
     <title>Organic Tea</title>
     <link rel="stylesheet" href="./static/css/style.css">
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -31,18 +29,14 @@
 
 <body>
 
-    <!-- FIXED NAVBAR WRAPPER -->
     <div class="fixed top-0 left-0 w-full z-[100] bg-white">
 
-        <!-- TOP BAR -->
         <div class="bg-[#7E4404] text-center text-xs md:text-sm py-2 text-white font-poppins">
             Pure grains. Fresh milling. Better taste.
         </div>
 
-        <!-- HEADER -->
         <header class="relative flex items-center justify-between px-6 md:px-20 py-3 border-b">
 
-            <!-- Left Menu (Desktop) -->
             <nav class="hidden xl:flex gap-8 font-medium text-black text-[15px] font-poppins">
                 <a href="index.html">HOME</a>
                 <a href="products.html">PRODUCTS</a>
@@ -50,23 +44,19 @@
                 <a href="contact.html">CONTACT</a>
             </nav>
 
-            <!-- Center Logo -->
             <div class="absolute left-1/2 -translate-x-1/2">
                 <a href="index.html">
                     <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
-            <!-- Right Side -->
             <div class="flex items-center gap-4 ml-auto">
 
-                <!-- Enquiry Button -->
                 <button onclick="sendEnquiry()"
                     class="hidden md:block bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
                     ENQUIRY
                 </button>
 
-                <!-- Mobile Menu Button -->
                 <button id="menuBtn" class="xl:hidden flex flex-col justify-center gap-1.5 w-8 h-8">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -80,14 +70,11 @@
     </div>
 
 
-    <!-- Overlay -->
     <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-[90]"></div>
 
-    <!-- Mobile Menu -->
     <div id="mobileMenu"
         class="fixed z-[110] top-0 right-0 h-full w-[70%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 xl:hidden">
 
-        <!-- Close Button -->
         <div class="flex justify-end p-6">
             <button id="closeMenu" class="text-4xl text-[#7E4404] font-medium">&times;</button>
         </div>
@@ -113,29 +100,24 @@
 
     <section class="relative mt-20 bg-cover bg-center py-24" style="background-image:url('./static/images/bg8.png')">
 
-        <!-- Overlay -->
         <div class="absolute inset-0 bg-black/60"></div>
 
         <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
 
-            <!-- Breadcrumb -->
             <div class="text-sm md:text-lg text-gray-200 text-left mb-16 font-poppins">
                 <a href="index.html" class="hover:underline">Home</a>
                 <span class="mx-2">›</span>
                 <span class="text-white">About</span>
             </div>
 
-            <!-- Subtitle -->
             <p class="uppercase md:tracking-[2px] text-sm font-medium mb-6 font-poppins">
                 About Us
             </p>
 
-            <!-- Heading -->
             <h1 class="text-4xl md:text-6xl font-semibold font-playfair mb-8">
                 About Eks Place
             </h1>
 
-            <!-- Description -->
             <p class="text-sm md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed font-poppins">
                 Eks Place is a trusted flour mill offering fresh flour, traditional masala powders, pure coconut oil and
                 homemade pickles made with natural ingredients and hygienic processing.
@@ -149,12 +131,10 @@
 
     <div class="relative overflow-hidden py-20">
 
-        <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="./static/images/bg3.png" class="w-full h-full object-cover opacity-10" alt="background">
         </div>
 
-        <!-- Content Wrapper -->
         <div class="relative">
 
 
@@ -162,7 +142,6 @@
             <section class="px-6 md:px-16">
                 <div class="grid lg:grid-cols-2 ">
 
-                    <!-- LEFT CONTENT -->
                     <div class="flex items-center justify-center ">
                         <div class="md:max-w-xl text-center">
 
@@ -187,7 +166,6 @@
                         </div>
                     </div>
 
-                    <!-- RIGHT IMAGE -->
                     <div class="h-[400px] md:h-[700px]">
                         <img src="./static/images/bg9.png" class="w-full h-full object-cover">
                     </div>
@@ -196,7 +174,6 @@
             </section>
 
 
-            <!-- Products / Highlights Section -->
             <section class="py-24">
                 <div class="w-full mx-auto px-6 md:px-20">
 
@@ -205,15 +182,12 @@
                         Pure & Traditional
                     </p>
 
-                    <!-- Section Heading -->
                     <h2 class="text-center font-playfair text-4xl mb-20">
                         Fresh & Natural Products
                     </h2>
 
-                    <!-- Cards Grid -->
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                        <!-- Card 1: Flours -->
                         <div class="text-center">
                             <img src="./static/images/millet.jpg"
                                 class="w-full h-[300px] md:h-[400px] object-cover mb-6" alt="Millet and Ragi Flour">
@@ -231,7 +205,6 @@
                             </p>
                         </div>
 
-                        <!-- Card 2: Coconut Oils -->
                         <div class="text-center">
                             <img src="./static/images/coconut4.jpg"
                                 class="w-full h-[300px] md:h-[400px] object-cover mb-6" alt="Pure Coconut Oil">
@@ -249,7 +222,6 @@
                             </p>
                         </div>
 
-                        <!-- Card 3: Masalas -->
                         <div class="text-center">
                             <img src="./static/images/masala.jpg"
                                 class="w-full h-[300px] md:h-[400px] object-cover mb-6"
@@ -268,7 +240,6 @@
                             </p>
                         </div>
 
-                        <!-- Card 4: Pickles -->
                         <div class="text-center">
                             <img src="./static/images/pickle.jpg"
                                 class="w-full h-[300px] md:h-[400px] object-cover mb-6" alt="Homemade Pickles">
@@ -296,9 +267,7 @@
             <section class="bg-[#3f5400] py-8 overflow-hidden">
                 <div class="relative">
 
-                    <!-- Marquee wrapper -->
                     <div class="marquee flex">
-                        <!-- First copy of content -->
                         <div class="marquee-content text-white text-xl md:text-2xl flex whitespace-nowrap">
                             <span class="mx-10">Tradition in Every Grain</span>
                             <span class="mx-10"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
@@ -326,7 +295,6 @@
                                 </svg></span>
                         </div>
 
-                        <!-- Second copy of content (for seamless loop) -->
                         <div class="marquee-content text-white text-xl md:text-2xl flex whitespace-nowrap">
                             <span class="mx-10">Tradition in Every Grain</span>
                             <span class="mx-10"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
@@ -362,7 +330,6 @@
             <section class="w-full border-t border-b border-gray-200 mt-20">
                 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
-                    <!-- Item 1 -->
                     <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="#677737" stroke-linejoin="round" stroke-width="0.9">
@@ -383,7 +350,6 @@
                         </p>
                     </div>
 
-                    <!-- Item 2 -->
                     <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                             <g fill="none" stroke="#677737" stroke-width="1.8">
@@ -403,7 +369,6 @@
                         </p>
                     </div>
 
-                    <!-- Item 3 -->
                     <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
                         <img src="./static/images/fresh.png" class="w-10 h-10">
 
@@ -417,7 +382,6 @@
                         </p>
                     </div>
 
-                    <!-- Item 4 -->
                     <div class="flex flex-col items-center text-center py-16 px-8">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="#677737" stroke-width="0.9">
@@ -448,7 +412,6 @@
 
     <section class="mt-10 relative bg-cover bg-center py-20" style="background-image:url('./static/images/bg5.jpg')">
 
-        <!-- Overlay -->
         <div class="absolute inset-0 bg-[#3f5400]/70"></div>
 
         <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -476,7 +439,6 @@
 
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 pb-16">
 
-            <!-- Logo -->
             <div>
                 <a href="index.html" class="inline-block">
                     <img src="./static/images/eks_logo.png" alt="Eks Place Logo" class="w-36 mb-4 object-contain">
@@ -496,7 +458,6 @@
             </div>
 
 
-            <!-- Navigation -->
             <div>
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Navigation</h3>
                 <ul class="space-y-6 text-md font-poppins">
@@ -516,7 +477,6 @@
             </div>
 
 
-            <!-- Specifications -->
             <div>
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Specifications</h3>
                 <ul class="space-y-6 text-md font-poppins">
@@ -528,7 +488,6 @@
             </div>
 
 
-            <!-- Contact -->
             <div>
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Contact</h3>
 
@@ -545,7 +504,6 @@
                     mrnoushad555@gmail.com
                 </p>
 
-                <!-- Map -->
                 <div class="mt-6 overflow-hidden rounded-md">
                     <iframe src="https://www.google.com/maps?q=Nilambur,Malappuram&output=embed"
                         class="w-full h-40 border-0">
@@ -557,7 +515,6 @@
         </div>
 
 
-        <!-- Bottom -->
         <div class="border-t border-gray-700 py-6 text-center text-sm">
             © 2025 All Rights Reserved. Powered by Cybexel
         </div>

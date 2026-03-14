@@ -7,13 +7,11 @@
 
     <title>Organic Tea</title>
     <link rel="stylesheet" href="./static/css/style.css">
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" as="image" href="./static/images/hero_sub1.png">
-<link rel="preload" as="image" href="./static/images/hero_sub2.png">
-<link rel="preload" as="image" href="./static/images/hero_sub3.png">
+    <link rel="preload" as="image" href="./static/images/hero_sub2.png">
+    <link rel="preload" as="image" href="./static/images/hero_sub3.png">
 
-    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -34,18 +32,14 @@
 
 <body>
 
-    <!-- FIXED NAVBAR WRAPPER -->
     <div class="fixed top-0 left-0 w-full z-[100] bg-white">
 
-        <!-- TOP BAR -->
         <div class="bg-[#7E4404] text-center text-xs md:text-sm py-2 text-white font-poppins">
             Pure grains. Fresh milling. Better taste.
         </div>
 
-        <!-- HEADER -->
         <header class="relative flex items-center justify-between px-6 md:px-20 py-3 border-b">
 
-            <!-- Left Menu (Desktop) -->
             <nav class="hidden xl:flex gap-8 font-medium text-black text-[15px] font-poppins">
                 <a href="index.html" class="text-[#7E4404] px-4 border-l border-r border-gray-300">HOME</a>
                 <a href="products.html">PRODUCTS</a>
@@ -53,23 +47,19 @@
                 <a href="contact.html">CONTACT</a>
             </nav>
 
-            <!-- Center Logo -->
             <div class="absolute left-1/2 -translate-x-1/2">
                 <a href="index.html">
                     <img src="./static/images/eks_logo.png" alt="EKS Logo" class="h-10 md:h-12 w-auto object-contain">
                 </a>
             </div>
 
-            <!-- Right Side -->
             <div class="flex items-center gap-4 ml-auto">
 
-                <!-- Enquiry Button -->
                 <button onclick="sendEnquiry()"
                     class="hidden md:block bg-[#7E4404] text-white px-6 py-2 rounded-md font-medium hover:bg-[#6a8a1d] transition font-poppins">
                     ENQUIRY
                 </button>
 
-                <!-- Mobile Menu Button -->
                 <button id="menuBtn" class="xl:hidden flex flex-col justify-center gap-1.5 w-8 h-8">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -83,14 +73,11 @@
     </div>
 
 
-    <!-- Overlay -->
     <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-[90]"></div>
 
-    <!-- Mobile Menu -->
     <div id="mobileMenu"
         class="fixed z-[110] top-0 right-0 h-full w-[70%] bg-white shadow-xl transform translate-x-full transition-transform duration-300 xl:hidden">
 
-        <!-- Close Button -->
         <div class="flex justify-end p-6">
             <button id="closeMenu" class="text-4xl text-[#7E4404] font-medium">&times;</button>
         </div>
@@ -112,21 +99,17 @@
 
 
 
-    <!-- HERO SECTION (UNCHANGED) -->
     <section class="relative overflow-hidden py-24 mt-20 md:mt-[100px]">
 
-        <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="./static/images/hero.png" class="w-full h-full object-cover" alt="background">
         </div>
 
-        <!-- Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-to-r from-[#3f5400]/80 to-[#2e2401]/80"></div>
 
 
         <div class="relative max-w-7xl h-[60vh] mx-auto px-10 grid md:grid-cols-2 items-center gap-16">
 
-            <!-- LEFT IMAGE -->
             <div class="relative h-full flex items-end">
 
                 <div
@@ -141,7 +124,6 @@
 
 
 
-            <!-- RIGHT TEXT -->
             <div class="text-white max-md:pr-8 max-md:absolute max-md:top-[-42px] max-md:left-5 max-md:w-11/12">
 
                 <p
@@ -170,7 +152,6 @@
         </div>
 
 
-        <!-- Decorative Leaves -->
 
         <img src="./static/images/leaf1.png"
             class="absolute w-16 left-16 top-40 opacity-80 float1 max-md:top-[22rem] max-md:left-[7rem]">
@@ -188,15 +169,12 @@
 
     <div id="explore" class="relative overflow-hidden py-20">
 
-        <!-- Background Image -->
         <div class="absolute inset-0">
             <img src="./static/images/bg3.png" class="w-full h-full object-cover opacity-10" alt="background">
         </div>
 
-        <!-- Content Wrapper -->
         <div class="relative">
 
-            <!-- Section 1 -->
             <section>
 
                 <div class="max-w-4xl mx-auto text-center md:px-6">
@@ -222,12 +200,10 @@
             </section>
 
 
-            <!-- Section 2 -->
             <section class="md:py-20">
 
                 <div class="w-full md:px-10 mx-auto grid md:grid-cols-3">
 
-                    <!-- Feature 1 -->
                     <div class="border-r border-gray-200 text-center p-10 bg-white/10 backdrop-blur-xs">
 
                         <img src="./static/images/pure.png" class="w-full h-[350px] object-cover mb-8">
@@ -248,7 +224,6 @@
                     </div>
 
 
-                    <!-- Feature 2 -->
                     <div class="border-r border-gray-200 text-center p-10 bg-white/10 backdrop-blur-xs">
 
                         <img src="./static/images/hyg2.png" class="w-full h-[350px] object-cover mb-8">
@@ -269,7 +244,6 @@
                     </div>
 
 
-                    <!-- Feature 3 -->
                     <div class="text-center p-10 bg-white/10 backdrop-blur-xs">
 
                         <img src="./static/images/hyg.jpeg" class="w-full h-[350px] object-cover mb-8">
@@ -297,11 +271,9 @@
 
                 <div class="w-full mx-auto px-6 md:px-20">
 
-                    <!-- Top Header -->
                     <div
                         class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 md:mb-12 gap-6 md:gap-0 px-4 sm:px-6 lg:px-0">
 
-                        <!-- Left: Heading -->
                         <div class="text-left">
                             <p
                                 class="uppercase tracking-widest text-xs sm:text-sm text-[#7E4404] font-semibold mb-1 sm:mb-2">
@@ -313,7 +285,6 @@
                             </h2>
                         </div>
 
-                        <!-- Right: Button -->
                         <a href="products.html"
                             class="self-end md:self-auto underline px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold hover:bg-[#7E4404] hover:text-white transition rounded">
                             VIEW ALL PRODUCTS
@@ -325,34 +296,28 @@
 
                     <div id="productContainerDesktop"
                         class="grid md:grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200 h-[550px]">
-                        <!-- Product Card Example -->
                         <div class="product-card relative bg-white text-center p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden"
                             data-name="Dried Tapioca" data-category="tappioca_products" data-type="Loose"
                             data-price="₹120 / Kg">
 
-                            <!-- Image -->
                             <div
                                 class="relative overflow-hidden mb-6 group-hover:absolute group-hover:inset-0 group-hover:mb-0">
 
-                                <!-- Default Image -->
                                 <img src="./static/images/tapioca.jpg"
                                     class="w-full h-[320px] object-contain transition-all duration-700 ease-in-out group-hover:scale-110">
 
-                                <!-- Hover Image -->
                                 <img src="./static/images/bg9.png" class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105
         transition-all duration-700 ease-in-out
         group-hover:opacity-100 group-hover:scale-100">
 
                             </div>
 
-                            <!-- Normal Content -->
                             <div class="group-hover:hidden relative z-10">
                                 <p class="text-gray-400 text-sm mb-1">Tapioca Products</p>
                                 <h3 class="text-xl font-playfair mb-2">Dried Tapioca</h3>
                                 <p class="font-semibold text-lg">₹120 / Kg</p>
                             </div>
 
-                            <!-- Hover Card -->
                             <div
                                 class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-20">
                                 <div class="bg-white w-[80%] shadow-xl mb-8">
@@ -361,7 +326,6 @@
                                         <h3 class="text-2xl font-playfair mb-2">Dried Tapioca</h3>
                                         <p class="font-semibold text-lg mb-4">₹120 / Kg</p>
 
-                                        <!-- WhatsApp Button -->
                                         <button
                                             class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 text-sm font-semibold transition"
                                             onclick="sendWhatsappEnquiry(this.closest('.product-card'))">
@@ -373,30 +337,24 @@
                         </div>
 
 
-                        <!-- Product Card 2 -->
                         <div class="product-card relative bg-white text-center p-4 sm:p-6 border-r border-gray-200 last:border-r-0 group overflow-hidden cursor-pointer"
                             data-name="Pickle" data-category="pickles" data-type="Packed" data-price="₹80 / Kg">
-                            <!-- Image -->
                             <div
                                 class="relative overflow-hidden mb-4 sm:mb-6 group-hover:absolute group-hover:inset-0 transition-all duration-700 ease-in-out">
 
-                                <!-- Default Image -->
                                 <img src="./static/images/pickle.jpg" class="w-full h-64 sm:h-[320px] object-cover transform transition-all duration-700 ease-in-out
         group-hover:h-full group-hover:scale-110">
 
-                                <!-- Hover Image -->
                                 <img src="./static/images/bg9.png" class="absolute inset-0 w-full h-full object-cover opacity-0 scale-105
         transform transition-all duration-700 ease-in-out
         group-hover:opacity-100 group-hover:scale-100">
 
                             </div>
-                            <!-- Normal Content -->
                             <div class="group-hover:hidden relative z-10">
                                 <p class="text-gray-400 text-sm mb-1">Pickles</p>
                                 <h3 class="text-lg sm:text-xl font-playfair mb-2">Mango Pickle</h3>
                                 <p class="font-semibold text-base sm:text-lg">₹250 / Jar</p>
                             </div>
-                            <!-- Hover Card -->
                             <div
                                 class="absolute inset-0 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition duration-500 z-20">
                                 <div class="bg-white w-[90%] sm:w-[80%] shadow-xl mb-4 sm:mb-8 p-4 sm:p-6 mx-auto">
@@ -444,11 +402,9 @@
 
                 <div class="w-full mx-auto px-6 md:px-20">
 
-                    <!-- Top Header -->
                     <div
                         class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 md:mb-12 gap-6 md:gap-0 px-4 sm:px-6 lg:px-0">
 
-                        <!-- Left: Heading -->
                         <div class="text-left">
                             <p
                                 class="uppercase tracking-widest text-xs sm:text-sm text-[#7E4404] font-semibold mb-1 sm:mb-2">
@@ -460,7 +416,6 @@
                             </h2>
                         </div>
 
-                        <!-- Right: Button -->
                         <a href="products.html"
                             class="self-end md:self-auto underline px-4 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold hover:bg-[#7E4404] hover:text-white transition rounded">
                             VIEW ALL PRODUCTS
@@ -472,26 +427,22 @@
 
                     <div id="productContainerMobile" class="grid grid-cols-1 gap-6">
 
-                        <!-- Product Card -->
                         <div class="product-card relative bg-white overflow-hidden flex flex-col cursor-pointer"
                             data-name="Dried Tapioca" data-category="Tapioca Products" data-type="Loose"
                             data-price="₹120 / Kg" data-image="./static/images/tapioca2.jpg"
                             data-hover-image="./static/images/tapioca_hover2.jpg">
 
-                            <!-- Default Image -->
                             <div class="relative w-full  h-[350px] sm:h-80 overflow-hidden">
                                 <img src="./static/images/tapioca2.jpg"
                                     class="w-full h-full object-cover transition-transform duration-500">
                             </div>
 
-                            <!-- Card Content (Always visible) -->
                             <div class="p-4">
                                 <p class="text-gray-500 text-sm mb-1">Tapioca Products</p>
                                 <h3 class="text-xl font-playfair mb-2">Dried Tapioca</h3>
                                 <p class="font-semibold text-lg mb-3">₹120 / Kg</p>
                             </div>
 
-                            <!-- Overlay Content (Hidden initially) -->
                             <div
                                 class="absolute inset-0 flex flex-col justify-end opacity-0 transition-opacity duration-500 z-20">
                                 <img src="./static/images/bg9.png"
@@ -512,40 +463,33 @@
                             </div>
 
                         </div>
-                        <!-- Product Card - Pickle -->
                         <div class="product-card relative bg-white overflow-hidden flex flex-col cursor-pointer"
                             data-name="Mango Pickle" data-category="Pickles" data-type="Packed" data-price="₹250 / Jar"
                             data-image="./static/images/pickle.jpg" data-hover-image="./static/images/pickle_hover.jpg">
 
-                            <!-- Default Image -->
                             <div class="relative w-full h-[350px] sm:h-80 overflow-hidden">
                                 <img src="./static/images/pickle.jpg"
                                     class="w-full h-full object-cover transition-transform duration-500">
                             </div>
 
-                            <!-- Card Content -->
                             <div class="p-4">
                                 <p class="text-gray-500 text-sm mb-1">Pickles</p>
                                 <h3 class="text-xl font-playfair mb-2">Mango Pickle</h3>
                                 <p class="font-semibold text-lg mb-3">₹250 / Jar</p>
                             </div>
 
-                            <!-- Overlay Content -->
                             <div
                                 class="absolute inset-0 flex flex-col justify-end opacity-0 transition-opacity duration-500 z-20">
 
-                                <!-- Hover Image -->
                                 <img src="./static/images/bg9.png"
                                     class="absolute inset-0 w-full h-full object-cover z-10">
 
-                                <!-- Bottom Box -->
                                 <div class="bg-white bg-opacity-95 p-4 z-20 flex flex-col gap-3 w-[85%] mx-auto mb-3">
 
                                     <p class="text-gray-500 text-sm mb-1">Pickles</p>
                                     <h3 class="text-xl font-playfair mb-1">Mango Pickle</h3>
                                     <p class="font-semibold text-lg mb-2">₹250 / Jar</p>
 
-                                    <!-- Weight Selection -->
                                     <div>
                                         <p class="text-gray-600 text-sm mb-1">Select Weight</p>
                                         <div class="flex gap-2">
@@ -563,7 +507,6 @@
                                         </div>
                                     </div>
 
-                                    <!-- WhatsApp Button -->
                                     <button
                                         class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded mt-2 transition"
                                         onclick="event.stopPropagation(); sendWhatsappEnquiry(this.closest('.product-card'))">
@@ -582,11 +525,9 @@
 
             <section class="h-auto md:h-[730px] grid grid-cols-1 md:grid-cols-2">
 
-                <!-- Left Content -->
                 <div
                     class="bg-[#3f5400] bg-[url('./static/images/bg6.jpg')] bg-cover bg-center bg-blend-multiply text-white flex flex-col justify-center items-center text-center px-6 sm:px-10 relative py-16 md:py-0">
 
-                    <!-- Main Tagline -->
                     <p class="uppercase font-medium text-xs sm:text-sm tracking-widest mb-2 sm:mb-4 font-poppins">
                         100% Natural & Traditional
                     </p>
@@ -605,7 +546,6 @@
 
 
 
-                    <!-- Left Vertical Text (hidden on small screens) -->
                     <div
                         class="hidden md:block absolute left-4 lg:left-16 bottom-0 text-2xl sm:text-3xl lg:text-4xl tracking-widest opacity-50 origin-left overflow-hidden h-full">
                         <div class="scroll-vertical-left whitespace-nowrap">
@@ -613,7 +553,6 @@
                         </div>
                     </div>
 
-                    <!-- Right Vertical Text (hidden on small screens) -->
                     <div
                         class="hidden md:block absolute right-4 lg:right-16 bottom-0 text-2xl sm:text-3xl lg:text-4xl tracking-widest opacity-50 origin-right overflow-hidden h-full">
                         <div class="scroll-vertical-right whitespace-nowrap">
@@ -623,7 +562,6 @@
 
                 </div>
 
-                <!-- Right Image -->
                 <div class="w-full h-96 md:h-full">
                     <img src="./static/images/coconut3.png" class="w-full h-full object-cover">
                 </div>
@@ -637,7 +575,6 @@
             <section class="w-full border-t border-b border-gray-200 mt-20">
                 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
-                    <!-- Item 1 -->
                     <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="#677737" stroke-linejoin="round" stroke-width="0.9">
@@ -658,7 +595,6 @@
                         </p>
                     </div>
 
-                    <!-- Item 2 -->
                     <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                             <g fill="none" stroke="#677737" stroke-width="1.8">
@@ -678,7 +614,6 @@
                         </p>
                     </div>
 
-                    <!-- Item 3 -->
                     <div class="flex flex-col items-center text-center py-16 px-8 border-r border-gray-200">
                         <img src="./static/images/fresh.png" class="w-10 h-10">
 
@@ -692,7 +627,6 @@
                         </p>
                     </div>
 
-                    <!-- Item 4 -->
                     <div class="flex flex-col items-center text-center py-16 px-8">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                             <g fill="none" stroke="#677737" stroke-width="0.9">
@@ -723,16 +657,13 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
 
-                    <!-- LEFT CONTENT -->
                     <div class="flex flex-col justify-center">
 
-                        <!-- Small Title -->
                         <p
                             class="text-xs sm:text-sm tracking-widest uppercase text-[#7E4404] mb-4 sm:mb-6 font-poppins font-medium">
                             Why Choose Our Products
                         </p>
 
-                        <!-- Headings -->
                         <div class="space-y-1 sm:space-y-2 mb-8 sm:mb-16">
                             <h2
                                 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-black leading-snug">
@@ -745,7 +676,6 @@
                                 Freshly Prepared</h2>
                         </div>
 
-                        <!-- Icon -->
                         <div class="mb-4 sm:mb-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24">
                                 <g fill="#677737" fill-rule="evenodd" clip-rule="evenodd">
@@ -757,7 +687,6 @@
                             </svg>
                         </div>
 
-                        <!-- Description -->
                         <p class="text-gray-700 text-base sm:text-lg leading-relaxed max-w-full lg:max-w-xl">
                             At EKS Flour Mill, we prepare fresh flour, masala powders, coconut oil and homemade pickles
                             using
@@ -767,7 +696,6 @@
 
                     </div>
 
-                    <!-- RIGHT IMAGE -->
                     <div class="h-64 sm:h-96 md:h-[620px] w-full">
                         <img src="./static/images/bg71.png" class="w-full h-full object-cover"
                             alt="Flour Mill Preparation">
@@ -784,7 +712,6 @@
 
     <section class="mt-10 relative bg-cover bg-center py-20" style="background-image:url('./static/images/bg5.jpg')">
 
-        <!-- Overlay -->
         <div class="absolute inset-0 bg-[#3f5400]/70"></div>
 
         <div class="relative max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -812,7 +739,6 @@
 
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 pb-16">
 
-            <!-- Logo -->
             <div>
                 <a href="index.html" class="inline-block">
                     <img src="./static/images/eks_logo.png" alt="Eks Place Logo" class="w-36 mb-4 object-contain">
@@ -832,7 +758,6 @@
             </div>
 
 
-            <!-- Navigation -->
             <div>
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Navigation</h3>
                 <ul class="space-y-6 text-md font-poppins">
@@ -852,7 +777,6 @@
             </div>
 
 
-            <!-- Specifications -->
             <div>
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Specifications</h3>
                 <ul class="space-y-6 text-md font-poppins">
@@ -864,7 +788,6 @@
             </div>
 
 
-            <!-- Contact -->
             <div>
                 <h3 class="text-white uppercase text-lg font-medium mb-6 font-poppins">Contact</h3>
 
@@ -881,7 +804,6 @@
                     mrnoushad555@gmail.com
                 </p>
 
-                <!-- Map -->
                 <div class="mt-6 overflow-hidden rounded-md">
                     <iframe src="https://www.google.com/maps?q=Nilambur,Malappuram&output=embed"
                         class="w-full h-40 border-0">
@@ -893,7 +815,6 @@
         </div>
 
 
-        <!-- Bottom -->
         <div class="border-t border-gray-700 py-6 text-center text-sm">
             © 2025 All Rights Reserved. Powered by Cybexel
         </div>
