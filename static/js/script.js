@@ -237,9 +237,9 @@ if (heroImage) {
 
 Product: ${name}
 Category: ${category}
-Type: ${type}
+
 Price: ${price}
-Quantity: ${quantity}
+
 
 Kindly share more details.`;
 
