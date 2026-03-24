@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Generic WhatsApp Enquiry
   // ===========================
   window.sendEnquiry = function () {
-    const phoneNumber = "919048244763";
+    const phoneNumber = "918606313325";
     const message = `Hello, I would like to enquire about your flour mill products. Kindly share more details.`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
@@ -80,7 +80,7 @@ Message:
 ${message}`;
 
       window.open(
-        `https://wa.me/919048244763?text=${encodeURIComponent(whatsappMessage)}`,
+        `https://wa.me/918606313325?text=${encodeURIComponent(whatsappMessage)}`,
         "_blank"
       );
 
@@ -244,7 +244,7 @@ Price: ${price}
 Kindly share more details.`;
 
     window.open(
-      `https://wa.me/919048244763?text=${encodeURIComponent(message)}`,
+      `https://wa.me/918606313325?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };
