@@ -141,11 +141,76 @@
                 </p>
 
                 <a href="products.html">
-                    <button
-                        class="bg-white rounded-md text-black px-8 py-3 font-medium hover:bg-gray-200 transition font-poppins">
+                    <button class="hero-btn">
                         VIEW PRODUCTS
                     </button>
                 </a>
+                <style>
+                    .hero-btn {
+                        background: rgb(246, 195, 30);
+                        color: #7E4404;
+                        padding: 12px 12px;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        border: none;
+                        position: relative;
+                        overflow: hidden;
+                        cursor: pointer;
+                        animation: glowPulse 2s infinite;
+                    }
+
+                    /* Shine animation */
+                    .hero-btn::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 60%;
+                        height: 100%;
+                        background: linear-gradient(120deg,
+                                transparent,
+                                rgba(255, 255, 255, 0.9),
+                                transparent);
+                        animation: shineMove 3s infinite;
+                    }
+
+                    /* Glow pulse */
+                    @keyframes glowPulse {
+                        0% {
+                            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+                        }
+
+                        50% {
+                            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+                        }
+
+                        100% {
+                            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+                        }
+                    }
+
+                    /* Shine movement */
+                    @keyframes shineMove {
+                        0% {
+                            left: -100%;
+                        }
+
+                        60% {
+                            left: 120%;
+                        }
+
+                        100% {
+                            left: 120%;
+                        }
+                    }
+
+                    /* Hover */
+                    .hero-btn:hover {
+                        transform: translateY(-3px) scale(1.03);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                    }
+                </style>
 
             </div>
 
